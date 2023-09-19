@@ -1,2 +1,3 @@
 # soclab
-my name is youwei liu (110020015) 
+my name is youwei liu 
+in NTHU implementation project
