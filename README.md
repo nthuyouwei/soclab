@@ -1,3 +1,5 @@
 # soclab
-my name is youwei liu 
-in NTHU implementation project
+My name is Youwei Liu.
+
+In NTHU implementation project.
+
