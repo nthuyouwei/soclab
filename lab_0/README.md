@@ -14,6 +14,17 @@ git log
 git config --global --list
 ```
 ---
+How to use the instruction of the linux.
+```
+cd // 切換目錄路徑
+cp // 拷貝
+pwd // 列印工作路徑
+ls //  目錄清單
+mkdir // 建立目錄
+touch //建立文件
+man // 使用說明
+vim //編輯畫面
+```
 
 
 
