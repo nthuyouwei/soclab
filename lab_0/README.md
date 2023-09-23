@@ -42,7 +42,7 @@ vim //編輯畫面
 
 - 其他標號
 
-[連結名稱](https://google.com "游標顯示")
+[google](https://google.com "游標顯示")
 
 圖片：
 [![圖片](https://img.sportsv.net/img/article/cover/9/106629/fit-BrHFceq1A5-945x495.jpg)](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sportsv.net%2Farticles%2F106629&psig=AOvVaw2MCyf16OQzKfFIIHIy2-hn&ust=1695556923597000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCND5jfHXwIEDFQAAAAAdAAAAABAE)
