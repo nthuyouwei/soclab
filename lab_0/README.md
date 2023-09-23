@@ -14,7 +14,7 @@ git log
 git config --global --list
 ```
 ---
-How to use the instruction of the linux.
+## use the instruction of the linux.
 ```
 cd // 切換目錄路徑
 cp // 拷貝
