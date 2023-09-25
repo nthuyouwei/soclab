@@ -6,7 +6,7 @@ the [video](<https://drive.google.com/file/d/15xcSumf4d2xWc1GKnjNUqzil6V6x7RP4/v
 the common instruction of git
 ```
 git clone <URL>
-git add <file>
+git add <file> // . 代表全部
 git commit -m "input_anything"
 git push
 git status
@@ -54,4 +54,9 @@ vim //編輯畫面
 
  - [ ] uncheck
  - [x] check
-
+---
+## how to run c in terminals
+```
+gcc hello.c -o test
+./test
+```
