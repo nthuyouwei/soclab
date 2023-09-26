@@ -11,12 +11,16 @@ student's number: 110020015
 - HLS(high level synthesis)
 - vivado
 - jupyter notebook
+  ![image](https://github.com/nthuyouwei/soclab/assets/145022311/7b3760a6-e115-4585-942f-4229c97a777f)
+
 
 ##  what did I leaen in this lab? 
 
 find an error when use incorrect program on the jupyter.
 
 if my filename of .bit and .hwh aren't same, there would be an error.
+
+
 ```
 \\from chatgpt
 
