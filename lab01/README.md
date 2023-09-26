@@ -8,7 +8,7 @@ student's number: 110020015
 
 
 ## brief introdction about the overall system
-- HLS(high level sythesis)
+- HLS(high level synthesis)
 - vivado
 - jupyter notebook
 
