@@ -6,6 +6,12 @@ school: NTHU
 
 student's number: 110020015
 
+
+## brief introdction about the overall system
+- HLS(high level sythesis)
+- vivado
+- jupyter notebook
+
 ##  what did I leaen in this lab? 
 
 find an error when use incorrect program on the jupyter.
