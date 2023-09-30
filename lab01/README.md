@@ -9,6 +9,13 @@ student's number: 110020015
 
 ## brief introdction about the overall system
 - HLS(high level synthesis)
+    - Functionality in c /c++
+    - Port interfaces
+    - Optimaztions
+    - Simulation
+    - Debugging
+    - Co-simulation
+    - Ip generator
 - vivado
 - jupyter notebook
   ![image](https://github.com/nthuyouwei/soclab/assets/145022311/7b3760a6-e115-4585-942f-4229c97a777f)
