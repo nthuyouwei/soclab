@@ -17,7 +17,18 @@ student's number: 110020015
     - Co-simulation
     - Ip generator
 - vivado
+    - Integrate the HLS IP into system Design
+    - Add Constraints
+    - Synthesis
+    - Implementation
+    - Bistream Generation
+    
 - jupyter notebook
+    - Program the board
+    - Provide the inputs
+    - Investigate the Output
+
+  
   ![image](https://github.com/nthuyouwei/soclab/assets/145022311/7b3760a6-e115-4585-942f-4229c97a777f)
   
   ![image](https://github.com/nthuyouwei/soclab/assets/145022311/e1e65c34-882a-47a2-b2a8-f1aa5fa52779)
