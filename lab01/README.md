@@ -29,7 +29,7 @@ student's number: 110020015
     - Investigate the Output
 
   
-the [result](<>)
+the [result](<https://github.com/nthuyouwei/soclab/blob/main/lab01/result_in_jupyter/Multip2Num.ipynb>)
 
 
 
