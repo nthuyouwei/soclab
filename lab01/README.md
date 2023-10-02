@@ -18,6 +18,10 @@ student's number: 110020015
     - Ip generator
 - vivado
     - Integrate the HLS IP into system Design
+      
+       the block design:
+      ![image](https://github.com/nthuyouwei/soclab/assets/145022311/797cbb35-8585-467a-b92b-26eac5e81bf4)
+
     - Add Constraints
     - Synthesis
     - Implementation
