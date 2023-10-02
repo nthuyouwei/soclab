@@ -8,6 +8,7 @@ student's number: 110020015
 
 
 ## brief introdction about the overall system
+  We want to generate a Ip for multiplication by HLS, and intergrate the HLS IP into the system design by vivado. Finally, generating a bitstream to run on the jupyter notebook.
 - HLS(high level synthesis)
     - Functionality in c /c++
     - Port interfaces
