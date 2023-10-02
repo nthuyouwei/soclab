@@ -27,9 +27,8 @@ student's number: 110020015
     - Program the board
     - Provide the inputs
     - Investigate the Output
-
-  
-the [result](<https://github.com/nthuyouwei/soclab/blob/main/lab01/result_in_jupyter/Multip2Num.ipynb>)
+ 
+   the [result](<https://github.com/nthuyouwei/soclab/blob/main/lab01/result_in_jupyter/Multip2Num.ipynb>) in the jupyter notebook.
 
 
 
