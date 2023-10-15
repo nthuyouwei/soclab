@@ -2,6 +2,7 @@
 
 #  目的
 #  verilog code
+In [final_ed](<>)
 #  synthesis part
 # 遇到的問題
 在這一次一次的過程可以看到很明顯的幾個錯誤。
