@@ -48,7 +48,7 @@ figure 1
 figure 2
 
 #  verilog code
-In [final_ed](<https://github.com/nthuyouwei/soclab/tree/main/lab3/final_ed>)
+The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/main/lab3/final_ed>).
 #  synthesis part
 
 
