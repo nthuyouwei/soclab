@@ -1,5 +1,5 @@
 #  環境
-use vivado in ubuntu.
+Use vivado in ubuntu.
 #  目的
 ## FIR - Verilog implementation
 **Function specification**
