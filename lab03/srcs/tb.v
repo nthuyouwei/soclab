@@ -125,7 +125,7 @@ module fir_tb
         .Do(tap_Do)
     );
 
-  shift_bram11 data_RAM(
+   bram11 data_RAM(
         .CLK(axis_clk),
         .WE(data_WE),
         .EN(data_EN),
@@ -133,10 +133,6 @@ module fir_tb
         .A(data_A),
         .Do(data_Do)
     );
-
-
-
-
 
     initial begin
         axis_clk = 0;
@@ -202,7 +198,7 @@ integer i;
             ss_tlast = 0; ss(Din_list[i]);
         end
          config_read_check(12'h00, 32'h00, 32'h0000_000f); 
-         arvalid <= 0; // check idle = 0
+         arvalid <= 0; 
          ss_tlast = 1; ss(Din_list[(Data_Num-1)]);
       $display("------End the data input(AXI-Stream)------");
  end
@@ -212,15 +208,13 @@ integer i;
    initial begin
         error = 0; status_error = 0;
         sm_tready = 1;
-      
         wait (sm_tvalid);
-        @(posedge axis_clk);
         for(k=0;k <data_length;k=k+1) begin
         sm(golden_list[k],k);
         end
-        config_read_check(12'h00, 32'h06, 32'h0000_0002); // check ap_done = 1 (0x00 [bit 1])
-        config_read_check(12'h00, 32'h06, 32'h0000_0004);
-        arvalid <= 0; // check ap_idle = 1 (0x00 [bit 2])
+       config_read_check(12'h00, 32'h06, 32'h0000_0002); // check ap_done = 1 (0x00 [bit 1])
+       config_read_check(12'h00, 32'h06, 32'h0000_0004);
+     arvalid <= 0; // check ap_idle = 1 (0x00 [bit 2])
         if (error == 0 & error_coef == 0) begin
             $display("---------------------------------------------");
             $display("-----------Congratulations! Pass-------------");
@@ -230,19 +224,6 @@ integer i;
         end
        $finish;
     end
-
-
-
-
-
-
-
-
-
-
-
-
-
 reg error_coef;
 integer k;
     initial begin
@@ -250,13 +231,13 @@ integer k;
         $display("----Start the coefficient input(AXI-lite)----");
         config_write(12'h10, data_length);
         for(k=0; k< Tape_Num; k=k+1) begin
-            config_write(12'h20+4*k, coef[k]);
+            config_write(12'h80+4*k, coef[k]);
         end
         awvalid <= 0; wvalid <= 0;
         // read-back and check
         $display(" Check Coefficient ...");
             for(k=0; k < Tape_Num; k=k+1) begin
-            config_read_check(12'h20+4*k, coef[k], 32'hffffffff);
+            config_read_check(12'h80+4*k, coef[k], 32'hffffffff);
         end         
         arvalid <= 0;
         $display(" Tape programming done ...");
@@ -338,70 +319,9 @@ integer k;
 
 endmodule
 
+
 // bram behavior code (can't be synthesis)
 // 11 words
-
-
-
-module shift_bram11 
-(
-    CLK,
-    WE,
-    EN,
-    Di,
-    Do,
-    A
-);
-    input   wire            CLK;
-    input   wire            WE;
-    input   wire            EN;
-    input   wire    [31:0]  Di;
-    output  wire     [31:0]  Do;
-    input   wire    [11:0]   A; 
-
-    //  11 words
-	reg [31:0] RAM[0:10];
-  
-
-
-   assign Do =RAM[(A>>2)-12'h08];//{32{EN}}&RAM[A>>2];    // read
-   
-
-    reg [31:0] D;
-  
-    integer i;
-    initial begin
-        for (i = 0; i <= 10; i = i + 1) begin
-            RAM[i] <= 32'b0;
-        end
-    
-    
-    end
-    always @(posedge CLK) begin
-        if(EN) begin
-	        if(WE) begin 
-	        RAM[0] <= Di;
-	        RAM[1]<=RAM[0];
-	        RAM[2]<=RAM[1];
-	        RAM[3]<=RAM[2];
-	        RAM[4]<=RAM[3];
-	        RAM[5]<=RAM[4];
-	        RAM[6]<=RAM[5];
-	        RAM[7]<=RAM[6];
-	        RAM[8]<=RAM[7];
-	        RAM[9]<=RAM[8];
-	        RAM[10]<=RAM[9];
-
-	     end
-	    end
-
-    end
-    
-
-endmodule
-
-
-
 module bram11 
 (
     CLK,
@@ -426,28 +346,16 @@ module bram11
         r_A <= A;
     end
 
-    assign Do =RAM[(A>>2)-12'h08];//{32{EN}}&RAM[A>>2];    // read
-
-    reg [31:0] D;
-  
+    assign Do = {32{EN}} & RAM[r_A>>2];    // read
     
+    reg [31:0] Temp_D;
     always @(posedge CLK) begin
         if(EN) begin
-	   // if(WE) begin RAM[(A>>2)-12'h08] <= Di;
-	    
-	        if(WE[0]) RAM[(A>>2)-12'h08][7:0] <= Di[7:0];
-            if(WE[1]) RAM[(A>>2)-12'h08][15:8] <= Di[15:8];
-            if(WE[2]) RAM[(A>>2)-12'h08][23:16] <= Di[23:16];
-            if(WE[3]) RAM[(A>>2)-12'h08][31:24] <= Di[31:24];
-	        
-	        
-	        
-	        
-	        
-            //end
-                     
+	        if(WE[0]) RAM[A>>2][7:0] <= Di[7:0];
+            if(WE[1]) RAM[A>>2][15:8] <= Di[15:8];
+            if(WE[2]) RAM[A>>2][23:16] <= Di[23:16];
+            if(WE[3]) RAM[A>>2][31:24] <= Di[31:24];
         end
     end
-    
 
 endmodule

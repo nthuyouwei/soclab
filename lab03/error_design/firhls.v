@@ -19,6 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+
 module fir#(parameter
     C_S_AXI_ADDR_WIDTH = 12,
     C_S_AXI_DATA_WIDTH = 32
@@ -77,17 +78,16 @@ module fir#(parameter
     localparam
     ADDR_AP_CTRL         =    12'h00,
     ADDR_datalength      =    12'h10,
-    ADDR_tapparameters   =    12'hFF,
-    ADDR_BITS                = 12;
+    ADDR_tapparameters   =    12'hFF;
     // output signal use reg 
 
     reg aw_ready; //finish
     reg w_ready; //finish
     reg ar_ready; //finish
-    reg [C_S_AXI_DATA_WIDTH-1:0]  r_data;
-    reg [C_S_AXI_ADDR_WIDTH-1:0]  aw_addr;
-    reg                           r_valid; //finish
-    reg                  [3:0]      tapwe;
+    reg [C_S_AXI_DATA_WIDTH-1:0] r_data;
+    reg [C_S_AXI_ADDR_WIDTH-1:0] aw_addr;
+    reg                          r_valid; //finish
+    reg                  [3:0]   tapwe;
     reg                          tapen;
     reg [C_S_AXI_DATA_WIDTH-1:0] tapdi;
     reg [C_S_AXI_ADDR_WIDTH-1:0] tapa;
@@ -95,10 +95,11 @@ module fir#(parameter
     reg                          dataen;
     reg [C_S_AXI_DATA_WIDTH-1:0] datadi;
     reg [C_S_AXI_ADDR_WIDTH-1:0] dataa;
-    
-    
-          
-    
+    reg smtvalid;
+    reg smtlast;
+    assign SM_tlast=smtlast;        
+    assign SM_tdata=yout;
+    assign SM_tvalid=smtvalid;
     assign Tap_WE=tapwe;
     assign Tap_EN=tapen;
     assign Tap_Di=tapdi;
@@ -107,10 +108,6 @@ module fir#(parameter
     assign Data_EN=dataen;
     assign Data_Di=datadi;
     assign Data_A=dataa;
-    
-    
-    
-    
     assign AWREADY=aw_ready;
     assign WREADY = w_ready;
     assign ARREADY=ar_ready;
@@ -121,175 +118,94 @@ module fir#(parameter
  always@(posedge ACLK)begin
         if (ARESET == 1'b0) begin
          smtvalid<=1'b0;
-         last<=2'b00;
-         mxstate<=4'b0000;
          yout<=32'h0;
          ymult<=32'h0;
          firstate<=1'b0;
          sstready<=1'b0;
          smtlast<=1'b0;
+         last<=0;
+         smtvalid<=0;
         end
+       
  end
-    
-    
-    
-    
-//-----yout
-reg smtvalid;
-assign SM_tdata=ydata;
-assign SM_tvalid=smtvalid;
-reg smtlast;
-assign SM_tlast=smtlast;
+ // let bram 0
+ reg bramstate;
+ always@(posedge ACLK) begin
+ if (ARESET == 1'b0) begin
+   bramstate<=0;
+   dataa<=12'h0;
+  end
+ else begin 
+ if(bramstate==1'b0)begin
 
-
+    if(dataa==12'h28) begin
+       datadi<=32'h00;
+       dataa<=12'h00;
+       bramstate<=1'b1;
+    end
+    else begin
+    datadi<=32'h00;
+    dataa<=dataa+12'h04;
+    end
+ end
+ end  
+ end
 
 // ---------decide the last input and last outout state
-reg [1:0] last;
-always@(posedge ACLK)begin
-if(SS_tlast)begin
-if(mxstate==4'b0000)begin
-if(last==2'b00)
-last<=2'b01;
-
-if(last==2'b01)begin
-last<=2'b10;
+reg last;
+always @(posedge ACLK) begin
+if (ARESET == 1'b0) begin
 end
-if(last==2'b10)begin
-last<=2'b11;
-end
-end
+else begin 
+   if(SS_tlast &&sstready)begin
+    last<=1'b1;
+    end
+   if(last&&smtvalid) begin
+     int_task_ap_done<=1'b1;
+      int_ap_idle<=1'b1;
+      smtvalid<=1'b0;
 end
 end
-
-
-//-----last signal 歸位全部  signal讓他在重新運作
-always@(posedge ACLK)begin
-
-if(last==2'b11)
- begin
- smtlast<=1'b1;
- smtvalid<=1'b1;
- firstate<=0;
- int_task_ap_done<=1'b1;
- int_ap_idle<=1'b1;
- ydata<=ymult+yout;
- mxstate<=4'b0000;
 end
-
-end
-
-
-
-
 //--------FIR caluculaate 
-
 reg [C_S_AXI_DATA_WIDTH-1:0]ymult;
 reg [C_S_AXI_DATA_WIDTH-1:0] yout;
-reg [C_S_AXI_DATA_WIDTH-1:0]ydata;
-
-
-
-reg [3:0] mxstate;
 
 always @(posedge ACLK) begin
-if(firstate)begin
-   if(mxstate==4'b0000)begin
-    tapa<=12'h20;
-    dataa<=12'h20;
-    ymult<=Tap_Do*Data_Do;
-    ydata<=ymult+yout;
-    smtvalid<=1'b1;
-    mxstate<=4'b0001;
+    if (firstate) begin
+        case (tapa)
+            12'h00: begin
+                ymult <= Tap_Do * Data_Do;
+                dataa <= (dataa == 12'h28) ? 12'h00 : dataa + 12'h04;
+                tapa <= tapa + 12'h04;
+            end
+            12'h04: begin
+                yout <= ymult;
+                dataa <= (dataa == 12'h28) ? 12'h00 : dataa + 12'h04;
+                ymult <= Tap_Do * Data_Do;
+                tapa <= tapa + 12'h04;
+            end
+            12'h28: begin
+                ymult <= Tap_Do * Data_Do;
+                yout <= ymult + yout;
+                tapa <= tapa + 12'h04;
+            end
+            12'h2c: begin
+                firstate <= 1'b0;
+                smtvalid <= 1'b1;
+                tapa <= 12'h00;
+                yout <= ymult + yout;
+                if (~last)
+                    sstready <= 1'b1;
+            end
+            default: begin
+                ymult <= Tap_Do * Data_Do;
+                yout <= ymult + yout;
+                dataa <= (dataa == 12'h28) ? 12'h00 : dataa + 12'h04;
+                tapa <= tapa + 12'h04;
+            end
+        endcase
     end
-
-   else if(mxstate==4'b0001)begin
-   tapa<=12'h24;
-   dataa<=12'h24;
-   ymult<=Tap_Do*Data_Do;
-   mxstate<=4'b0010;
-   yout<=ymult;
-   smtvalid<=1'b0;
-   end
-
-   else if(mxstate==4'b0010)begin
-   tapa<=12'h28;
-   dataa<=12'h28;
-   ymult<=Tap_Do*Data_Do;
-   yout<=ymult+yout;
-   mxstate<=4'b0011;
-   end
-
-   else if(mxstate==4'b0011)begin
-   tapa<=12'h2c;
-   dataa<=12'h2c;
-   ymult<=Tap_Do*Data_Do;
-   mxstate<=4'b0100;
-   yout<=ymult+yout;
-   end
-
-   else if(mxstate==4'b0100)begin
-   tapa<=12'h30;
-   dataa<=12'h30;
-   ymult<=Tap_Do*Data_Do;
-   mxstate<=4'b0101;
-   yout<=ymult+yout;
-   end
-
-
-   else if(mxstate==4'b0101)begin
-   tapa<=12'h34;
-   dataa<=12'h34;
-  ymult<=Tap_Do*Data_Do;
-  mxstate<=4'b0110;
-  yout<=ymult+yout;
-  end
-
-    else if(mxstate==4'b0110)begin
-tapa<=12'h38;
-dataa<=12'h38;
-ymult<=Tap_Do*Data_Do;
-mxstate<=4'b0111;
-yout<=ymult+yout;
-end
-
-else if(mxstate==4'b0111)begin
-tapa<=12'h3c;
-dataa<=12'h3c;
-ymult<=Tap_Do*Data_Do;
-mxstate<=4'b1000;
-yout<=ymult+yout;
-end
-
-else if(mxstate==4'b1000)begin
-tapa<=12'h40;
-dataa<=12'h40;
-ymult<=Tap_Do*Data_Do;
-mxstate<=4'b1001;
-yout<=ymult+yout;
-end
-
-else if(mxstate==4'b1001)begin
-tapa<=12'h44;
-dataa<=12'h44;
-ymult<=Tap_Do*Data_Do;
-mxstate<=4'b1010;
-yout<=ymult+yout;
-end
-
-else if(mxstate==4'b1010)begin
-tapa<=12'h48;
-dataa<=12'h48;
-ymult<=Tap_Do*Data_Do;
-mxstate<=4'b0000;
-firstate<=1'b0;
-    if(last==2'b00)begin
-    sstready<=1'b1;
-    end
-yout<=ymult+yout;
-end
-
-
-end
 end
 
 
@@ -297,49 +213,35 @@ end
 
 
 //-------Xin-------
-reg sstready=1'b0;
+
+reg sstready=0;
 assign SS_tready =sstready;
 
 reg firstate;
+reg [C_S_AXI_ADDR_WIDTH-1:0] data_addr=12'h20;
 always @(posedge ACLK)begin
-
-if( SS_tvalid  && int_ap_start) begin
+if (ARESET == 1'b0) begin
+         sstready<=1'b0;
+         end
+else if( SS_tvalid  && int_ap_start) begin
     sstready<=1'b1;
-    tapa<=12'h20;
-    dataa<=12'h20;
+    tapa<=12'h00;
+    dataa<=12'h00;
     int_ap_start<=1'b0;
    end
-   
-end
-
-
-
-
-reg [C_S_AXI_ADDR_WIDTH-1:0] data_addr=12'h20;
-
-
-always @(posedge ACLK)begin
-if(sstready==1'b0) begin  
-datawe<=1'b0;
-end
-
-end
-
-
-
-always @(posedge ACLK)begin
-
-if(sstready && SS_tvalid) begin   
+else if(sstready && SS_tvalid) begin   
+    smtvalid<=1'b0;
+    tapa<=12'h00;
     datadi<=SS_tdata;
-    datawe<=1;
+    datawe<=4'b1111;
     sstready<=1'b0;
     firstate<=1'b1;
-      end
-
 end
-
-
-
+else if(bramstate==1'b0)
+ datawe<=4'b1111;
+else
+datawe<=4'b0;
+end
 
     //produce tapen
     always @(posedge ACLK) begin
@@ -383,7 +285,7 @@ end
         end
         else begin
             if (~aw_ready && AWVALID&& WVALID ) begin
-                aw_ready <= 1'b1;
+                aw_ready <= ~aw_ready;
 
             end
             else  begin
@@ -399,7 +301,7 @@ end
         end
         else begin
             if (~w_ready && WVALID && AWVALID ) begin
-                w_ready <= 1'b1;
+                w_ready <= ~w_ready;
             end
             else begin
                 w_ready <= 1'b0;
@@ -407,18 +309,44 @@ end
         end
     end
 
+//-----------符合bram的地址
 
 
-always@(posedge ACLK)begin
-if(AWVALID==1'b1)begin
-tapa<=AWADDR;
-end
+always @(posedge ACLK) begin
+    if (AWVALID == 1'b1) begin
+        case (AWADDR)
+            12'h20: tapa <= 12'h00;
+            12'h24: tapa <= 12'h04;
+            12'h28: tapa <= 12'h08;
+            12'h2c: tapa <= 12'h0c;
+            12'h30: tapa <= 12'h10;
+            12'h34: tapa <= 12'h14;
+            12'h38: tapa <= 12'h18;
+            12'h3c: tapa <= 12'h1c;
+            12'h40: tapa <= 12'h20;
+            12'h44: tapa <= 12'h24;
+            12'h48: tapa <= 12'h28;
+            default: tapa <= 12'h00;  // 在AWADDR没有匹配时使用默认值
+        endcase
+    end
 end
 always@(negedge ACLK)begin
-if(ARVALID==1'b1)begin
-    if((ARADDR!=12'h0) && (ARADDR!=ADDR_datalength))begin
-    //if(ARADDR==12'h20)
-        tapa<=ARADDR;
+if (ARVALID == 1'b1) begin
+    if ((ARADDR != 12'h0) && (ARADDR != ADDR_datalength)) begin
+        case (ARADDR)
+            12'h20: tapa <= 12'h00;
+            12'h24: tapa <= 12'h04;
+            12'h28: tapa <= 12'h08;
+            12'h2c: tapa <= 12'h0c;
+            12'h30: tapa <= 12'h10;
+            12'h34: tapa <= 12'h14;
+            12'h38: tapa <= 12'h18;
+            12'h3c: tapa <= 12'h1c;
+            12'h40: tapa <= 12'h20;
+            12'h44: tapa <= 12'h24;
+            12'h48: tapa <= 12'h28;
+            default: tapa <= 12'h00;  // 在ARADDR没有匹配时使用默认值
+        endcase
     end
 end
 end
@@ -457,37 +385,26 @@ end
   
     always @(posedge ACLK) begin
         if (ARESET == 1'b0) begin
-            ar_ready = 1'b0;
+            ar_ready <= 1'b0;
           
         end
         else begin
             if (~ar_ready & ARVALID )begin
-                ar_ready = 1'b1;
+                ar_ready <= ~ar_ready;
            
             end
             else begin
-                ar_ready = 1'b0;
+            if(r_valid)
+                ar_ready <= ~ar_ready;
             end
         end
     end
 
 
     // produce rvaild  應該要check有沒有arready在前
-    always @(posedge ACLK) begin
-        if (ARESET == 1'b0) begin
-            r_valid <= 0;
-        end
-        else begin
-            if (ARVALID && ~r_valid && ar_ready ) begin
-                r_valid <= 1'b1;
-            end
-            else  if (RREADY && r_valid)begin
-                r_valid <= 1'b0;
-            end
-        end
-    end
-    //  readdate
 
+    //  readdate
+    reg rvalidstate;
     reg int_ap_start;
     reg int_task_ap_done;
     reg int_ap_idle;
@@ -497,15 +414,32 @@ end
             r_data<=0;
             int_task_ap_done<=1'b0;
             int_ap_idle<=1'b0;
+             r_valid <= 0;
         end
         else if (ar_ready && ~r_valid && ARVALID  ) begin
+            rvalidstate<=~rvalidstate;
+            
+
+        end
+        else  if (RREADY && r_valid)begin
+                r_valid <= 1'b0;
+        end
+    end
+    always  @(posedge ACLK) begin
+
+        if( ARESET == 1'b0) begin
+        rvalidstate<=1'b0;
+        end
+        else begin
+        if(rvalidstate) begin
+           rvalidstate<=~rvalidstate;
+           r_valid <= ~r_valid;
             case (ARADDR)
                 ADDR_AP_CTRL: begin
                     r_data[0] <= int_ap_start;
                     r_data[1] <= int_task_ap_done;
                     r_data[2] <= int_ap_idle;
                     
-
                 end
                 ADDR_datalength: begin
                     r_data <= data_length;
@@ -513,10 +447,9 @@ end
                 default: begin
                     r_data <=Tap_Do;
                 end
-            endcase
-
+        endcase
         end
-
-    end
+      end
+      end
 
 endmodule
