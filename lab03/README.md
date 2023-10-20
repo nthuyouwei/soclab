@@ -48,8 +48,11 @@ figure 1
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/340e45d7-2971-4781-a7ad-da2b40731715)
 figure 2
 # 設計細節
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/2ab1ddd0-749e-4733-b831-2b9ff2735e18)
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/2aca7c8f-c2bb-43ec-a124-b02a46c9e0da)
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/6142d3aa-9218-4f70-97ef-7cc0dfd77534)
 
 
 
