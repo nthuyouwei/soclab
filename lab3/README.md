@@ -46,11 +46,25 @@ figure 1
 **The testbench should follow the figure 2:**
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/340e45d7-2971-4781-a7ad-da2b40731715)
 figure 2
+# 設計細節
+
+
+
+
 
 #  verilog code
 The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/main/lab3/final_ed>).
 #  synthesis part
 
+使用資源(more details on):
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/d167d8a4-7f46-4d45-87f5-1b856bc7f912)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/184da395-185f-4a40-8445-0167fa534063)
+
+Design timing summary(more details on ):
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/3e619c0f-000c-4eb6-b3a6-6ef3ce9a3cca)
 
 # 遇到的問題
 在這一次一次的過程可以看到很明顯的幾個錯誤。
