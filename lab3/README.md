@@ -54,7 +54,9 @@ figure 2
 
 #  verilog code
 The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/main/lab3/final_ed>).
-#  synthesis part
+# simulation part
+
+# synthesis part
 
 ## 使用資源(more details on [syn](https://github.com/nthuyouwei/soclab/tree/main/lab3/syn)):
 
