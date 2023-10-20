@@ -49,11 +49,11 @@ figure 1
 figure 2
 # 設計細節
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/2ab1ddd0-749e-4733-b831-2b9ff2735e18)
-
+figure 3
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/2aca7c8f-c2bb-43ec-a124-b02a46c9e0da)
-
+figure 4
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/6142d3aa-9218-4f70-97ef-7cc0dfd77534)
-
+figure 5
 
 
 #  verilog code
@@ -63,18 +63,38 @@ The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/
 check coef:
 
 <img width="30%" height="30%" src="https://github.com/nthuyouwei/soclab/assets/145022311/360ea952-65e4-4d22-9812-3b55a6ab1a3e"/>
-
+figure 6
 
 check youtput:
 
 <img width="50%" height="50%" src="https://github.com/nthuyouwei/soclab/assets/145022311/91efa2b0-3be7-4b71-b5da-806ef522ac04"/>
-
+figure 7
 
 check ap_idle,ap_start:
 
 <img width="30%" height="30%" src="https://github.com/nthuyouwei/soclab/assets/145022311/1b0a10e8-d9b3-4f4f-820d-b5c03718df87"/>
+figure 8
 
 ## waveform (more details on [fir.vcd](https://github.com/nthuyouwei/soclab/tree/main/lab3/sim))
+write part:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/4940ee89-d643-4f27-8c4b-a28a3394839d)
+figure 9
+
+read part:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/ec01e8d5-66ee-49e6-a3bc-1e4671c0886f)
+figure 10
+
+輸入Xin到Yout:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/7645a304-3498-48e8-afd7-b2c5430aed97)
+figure 11
+
+確認運作中idle=0，跟最後一筆Y輸出，idle=1:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/f2e02ea9-2fb3-4ca0-a765-0e58772a1bc6)
+figure 12
 
 # synthesis part
 
@@ -82,17 +102,18 @@ check ap_idle,ap_start:
 
 <img width="30%" height="30%" src="https://github.com/nthuyouwei/soclab/assets/145022311/d167d8a4-7f46-4d45-87f5-1b856bc7f912"/>
 
-figure
+figure 13
+
 
 <img width="40%" height="40%" src="https://github.com/nthuyouwei/soclab/assets/145022311/184da395-185f-4a40-8445-0167fa534063"/>
-
-figure
+figure 14
 
 ## Design timing summary(more details on [timing_report](https://github.com/nthuyouwei/soclab/blob/main/lab3/timing_report.txt)):
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/3e619c0f-000c-4eb6-b3a6-6ef3ce9a3cca)
+figure 15
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/72a63e4b-265a-4863-b60e-f0860cc9a586)
-
+figure 16
 
 
