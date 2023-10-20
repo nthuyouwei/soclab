@@ -55,6 +55,18 @@ figure 2
 #  verilog code
 The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/main/lab3/final_ed>).
 # simulation part
+## simulation log(more details on [simulate.log]())
+check coef:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/360ea952-65e4-4d22-9812-3b55a6ab1a3e=10%x)
+
+check youtput:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/91efa2b0-3be7-4b71-b5da-806ef522ac04)
+
+check ap_idle,ap_start:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/1b0a10e8-d9b3-4f4f-820d-b5c03718df87)
 
 # synthesis part
 
