@@ -58,7 +58,8 @@ The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/
 ## simulation log(more details on [simulate.log]())
 check coef:
 
-![image](https://github.com/nthuyouwei/soclab/assets/145022311/360ea952-65e4-4d22-9812-3b55a6ab1a3e=10%x)
+<img width="350" height="500" src="https://github.com/nthuyouwei/soclab/assets/145022311/360ea952-65e4-4d22-9812-3b55a6ab1a3e"/>
+
 
 check youtput:
 
@@ -67,6 +68,7 @@ check youtput:
 check ap_idle,ap_start:
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/1b0a10e8-d9b3-4f4f-820d-b5c03718df87)
+## waveform (more details on [fir.vcd]())
 
 # synthesis part
 
