@@ -1,4 +1,4 @@
-繳交時間:10/21
+lab03 繳交時間:10/21
 #  環境
 Use vivado in ubuntu.
 #  目的
