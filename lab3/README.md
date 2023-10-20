@@ -37,7 +37,7 @@ Configuration Register Address map:
 
 0x10-14 - data-length
 
-0x20-FF – Tap parameters, (e.g., 0x20-24 Tap0, in sequence …)
+0x80-FF – Tap parameters, (e.g., 0x20-24 Tap0, in sequence …)
 
 **The mmodule schematic diagram like :**
 ![figure](https://github.com/nthuyouwei/soclab/assets/145022311/5179cf95-539c-4674-acae-898eb46d6b58)
