@@ -70,14 +70,5 @@ The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/72a63e4b-265a-4863-b60e-f0860cc9a586)
 
-# 遇到的問題
-在這一次一次的過程可以看到很明顯的幾個錯誤。
-第一個我在fir module 底下,用了一個axi-lite的module來方便使用，但是我在定義Tap_A時，發現在axi_lite 裡面會用到他會直接回傳回去，這樣有點麻煩無法在fir層上做更改。但這不是資源的問題，單層我覺得沒有意義再用一層寫，畢竟這個沒到那麼複雜。
-第二個和第三個我在bram的了解不夠清楚，一開始以為bram外接可以自己設定BRAM，但實際上很明顯的不行。
-最後一個是目前定案的，我在這發現synthesis時如果if 用得太多或不好可能造成FF的數目增加，我後面有幾個部分從if變成case感覺較好。再者我覺得有關賦值的寫法，不確定有沒有差，舉例:
-```
-//if a =1'b0;
-a<=1'b1;
-a<=~a; 
-```
+
 
