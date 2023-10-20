@@ -56,7 +56,7 @@ figure 2
 The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/main/lab3/final_ed>).
 #  synthesis part
 
-## 使用資源(more details on [syn]()):
+## 使用資源(more details on [syn](https://github.com/nthuyouwei/soclab/tree/main/lab3/syn)):
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/d167d8a4-7f46-4d45-87f5-1b856bc7f912)
 
