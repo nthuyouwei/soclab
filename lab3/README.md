@@ -62,7 +62,7 @@ The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/184da395-185f-4a40-8445-0167fa534063)
 
-## Design timing summary(more details on [timing_report]()):
+## Design timing summary(more details on [timing_report](https://github.com/nthuyouwei/soclab/blob/main/lab3/timing_report.txt)):
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/3e619c0f-000c-4eb6-b3a6-6ef3ce9a3cca)
 
