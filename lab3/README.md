@@ -1,3 +1,4 @@
+繳交時間:10/21
 #  環境
 Use vivado in ubuntu.
 #  目的
@@ -58,25 +59,31 @@ The fir.v and tb.v in the [final_ed](<https://github.com/nthuyouwei/soclab/tree/
 ## simulation log(more details on [simulate.log](https://github.com/nthuyouwei/soclab/tree/main/lab3/sim))
 check coef:
 
-<img width="350" height="500" src="https://github.com/nthuyouwei/soclab/assets/145022311/360ea952-65e4-4d22-9812-3b55a6ab1a3e"/>
+<img width="30%" height="30%" src="https://github.com/nthuyouwei/soclab/assets/145022311/360ea952-65e4-4d22-9812-3b55a6ab1a3e"/>
 
 
 check youtput:
 
-![image](https://github.com/nthuyouwei/soclab/assets/145022311/91efa2b0-3be7-4b71-b5da-806ef522ac04)
+<img width="50%" height="50%" src="https://github.com/nthuyouwei/soclab/assets/145022311/91efa2b0-3be7-4b71-b5da-806ef522ac04"/>
+
 
 check ap_idle,ap_start:
 
-![image](https://github.com/nthuyouwei/soclab/assets/145022311/1b0a10e8-d9b3-4f4f-820d-b5c03718df87)
+<img width="30%" height="30%" src="https://github.com/nthuyouwei/soclab/assets/145022311/1b0a10e8-d9b3-4f4f-820d-b5c03718df87"/>
+
 ## waveform (more details on [fir.vcd](https://github.com/nthuyouwei/soclab/tree/main/lab3/sim))
 
 # synthesis part
 
 ## 使用資源(more details on [syn](https://github.com/nthuyouwei/soclab/tree/main/lab3/syn)):
 
-![image](https://github.com/nthuyouwei/soclab/assets/145022311/d167d8a4-7f46-4d45-87f5-1b856bc7f912)
+<img width="30%" height="30%" src="https://github.com/nthuyouwei/soclab/assets/145022311/d167d8a4-7f46-4d45-87f5-1b856bc7f912"/>
 
-![image](https://github.com/nthuyouwei/soclab/assets/145022311/184da395-185f-4a40-8445-0167fa534063)
+figure
+
+<img width="40%" height="40%" src="https://github.com/nthuyouwei/soclab/assets/145022311/184da395-185f-4a40-8445-0167fa534063"/>
+
+figure
 
 ## Design timing summary(more details on [timing_report](https://github.com/nthuyouwei/soclab/blob/main/lab3/timing_report.txt)):
 
