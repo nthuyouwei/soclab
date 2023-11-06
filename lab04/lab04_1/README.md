@@ -13,6 +13,9 @@ correspond to
 
 And 
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/4834b1ff-ec85-4587-90b7-a8f80f524c2d)
+
+
 ### What address allocate for user project and how many space is required to allocate to firmware code ?
 
 從0x38000000開始到0x380001a0，總共416bytes。
