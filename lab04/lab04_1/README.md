@@ -14,6 +14,11 @@ correspond to
 And 
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/4834b1ff-ec85-4587-90b7-a8f80f524c2d)
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/d4852498-f869-4035-9708-cfb807c9ceb1)
+
+correspond to
+
+
 
 
 ### What address allocate for user project and how many space is required to allocate to firmware code ?
