@@ -9,7 +9,8 @@ the related code can be found in [counter_la_fir.elf-fir.s](https://github.com/n
 
 correspond to 
 
-![image](https://github.com/nthuyouwei/soclab/assets/145022311/49eebb47-c1a3-4114-a41f-8c54b02097e8)
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/1a64f6d0-87da-49ef-a7b4-388dbc65efad)
+
 
 And 
 
