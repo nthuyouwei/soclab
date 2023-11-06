@@ -5,6 +5,14 @@ the related code can be found in [counter_la_fir.elf-fir.s](https://github.com/n
 
 ### How does it execute  multiplication in assembly code ?
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/45922a48-51b5-4fb5-a9cd-a00ca6cbabbd)
+
+correspond to 
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/49eebb47-c1a3-4114-a41f-8c54b02097e8)
+
+And 
+
 ### What address allocate for user project and how many space is required to allocate to firmware code ?
 
 從0x38000000開始到0x380001a0，總共416bytes。
