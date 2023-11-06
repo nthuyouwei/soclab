@@ -1,4 +1,4 @@
-# Report
+# lab4_1 Report
 110020015 劉祐瑋
 ## Firmware code 
 the related code can be found in [counter_la_fir.elf-fir.s](https://github.com/nthuyouwei/soclab/blob/main/lab04/lab04_1/lab-exmem_fir/testbench/counter_la_fir/counter_la_fir.elf-fir.s) and [counter_la_fir.out](https://github.com/nthuyouwei/soclab/blob/main/lab04/lab04_1/lab-exmem_fir/testbench/counter_la_fir/counter_la_fir.out)
@@ -20,7 +20,7 @@ correspond to
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/c84b37f6-662e-46b1-8cca-3491478afc77)
 
 ### How does it execute  multiplication in assembly code ?
-
+乘法是通過名為 __mulsi3 的函数来执行的。
 ### What address allocate for user project and how many space is required to allocate to firmware code ?
 
 從0x38000000開始到0x380001a0，總共416bytes。
