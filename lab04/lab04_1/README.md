@@ -3,8 +3,6 @@
 ## Firmware code 
 the related code can be found in [counter_la_fir.elf-fir.s](https://github.com/nthuyouwei/soclab/blob/main/lab04/lab04_1/lab-exmem_fir/testbench/counter_la_fir/counter_la_fir.elf-fir.s) and [counter_la_fir.out](https://github.com/nthuyouwei/soclab/blob/main/lab04/lab04_1/lab-exmem_fir/testbench/counter_la_fir/counter_la_fir.out)
 
-### How does it execute  multiplication in assembly code ?
-
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/45922a48-51b5-4fb5-a9cd-a00ca6cbabbd)
 
 correspond to 
@@ -19,8 +17,9 @@ And
 
 correspond to
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/c84b37f6-662e-46b1-8cca-3491478afc77)
 
-
+### How does it execute  multiplication in assembly code ?
 
 ### What address allocate for user project and how many space is required to allocate to firmware code ?
 
