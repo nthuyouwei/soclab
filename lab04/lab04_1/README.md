@@ -23,8 +23,27 @@ source run_clean
 source run_sim
 gtkwave counter_la_fir.vcd
 ```
+### WB protocol 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/4da48f74-7eb9-41f3-afd1-bc2b0395ea31)
 
+注意ack應該在stb跟cyc拉起後，經過12個cycle才拉起，而不是10個因為要考慮bram。
+### Waveform
 
+Overview:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/0d0d3726-474a-4b2b-9522-36ddde17a313)
+
+Init:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/6df48511-18aa-4993-8088-a05a645bf13c)
+
+fir:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/6bfbf08b-a328-408b-a37f-cf5f015d6d10)
+
+End:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/24150ec9-c542-4d52-89e6-b6dc01f70bab)
 
 
 ## synthesis
