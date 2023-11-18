@@ -12,7 +12,7 @@ module fir_lab4
     //--------------------------------------------------
     // AXI-lite slave write
     // address write
-    output  wire                     awready,
+    //a wire
     input   wire                     awvalid,
     input   wire [(pADDR_WIDTH-1):0] awaddr,
     // data write
