@@ -53,8 +53,8 @@ module axilite
 
     input   wire                     axis_clk,
     input   wire                     axis_rst_n,
-    input   wire     [2:0]           ss_tready,
-    input   wire     [3:0]           sm_tvalid,
+    input   wire     [2:0]           state_o, 
+    input   wire     [3:0]           counter,
     input   wire                     sm_tlast
 );
 
@@ -74,12 +74,12 @@ module axilite
 	// handshakes of Write / Read
 	wire aw_hs, w_hs, ar_hs, r_hs;
 
-	assign data_length = data_length_reg;
+    assign data_length = data_length_reg;
 
 	// handshakes signals
-	assign aw_hs = awvalid & awready;
+    assign aw_hs = awvalid & awready;
     assign w_hs  = wvalid  & wready;
-	assign ar_hs = arvalid & arready;
+    assign ar_hs = arvalid & arready;
     assign r_hs  = rvalid  & rready;
 
 	// AXI-Lite Write / Read signal
@@ -93,12 +93,12 @@ module axilite
     
     
     
-	assign arready = ((state == TAPE| state == CALC) & arvalid);
+    assign arready = ((state == TAPE| state == CALC) & arvalid);
     assign rvalid  = rvalid_reg;
-	assign rdata  = rdata_reg;
+    assign rdata  = rdata_reg;
 
 	// AXI-Stream Tap RAM signal
-	assign tap_EN = 1;
+    assign tap_EN = 1;
     assign tap_WE = tap_WE_reg;
     assign tap_Di = tap_Di_reg;
     assign tap_A  = tap_A_reg;
@@ -194,14 +194,14 @@ module axilite
 	always@(posedge axis_clk) begin
         if (~axis_rst_n) begin
         rvalid_reg <= 0;
-        end
-	else if (~rvalid_reg & ar_hs & rready) begin
-	rvalid_reg<=1'b1;
-	end
-	else begin
-	rvalid_reg<=1'b0;
-	end			// when address handshake, send read valid
-        end
+         end
+	 else if (~rvalid_reg & ar_hs & rready) begin
+	 rvalid_reg<=1'b1;
+	 end
+	 else begin
+	 rvalid_reg<=1'b0;
+	 end			// when address handshake, send read valid
+       end
 
 	// WRITE / READ / CALCULATE Address
 	always @(*) begin
@@ -264,8 +264,8 @@ module axilite
     end
     
        wire x_reg,y_reg;
-       assign x_reg =(ss_tready==3'd3)?1:0;
-       assign y_reg =(sm_tvalid==14)?1:0;
+       assign x_reg =(state_o==3'd3)?1:0;
+       assign y_reg =(counter==14)?1:0;
 	//read change
 	reg x_ready_reg, y_ready_reg;
 	always @(posedge axis_clk or negedge axis_rst_n) begin

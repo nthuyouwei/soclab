@@ -444,8 +444,8 @@ module fir
         .fir_raddr(Tap_addr),
         .axis_clk(axis_clk),
         .axis_rst_n(axis_rst_n),
-        .ss_tready(state),
-        .sm_tvalid(counter),
+        .state_o(state),
+        .counter(counter),
         .sm_tlast(sm_tlast)
         );
 
