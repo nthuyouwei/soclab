@@ -3,14 +3,23 @@
 110011141 陳昇達
 ## Firmware code 
 
+### 設定 coef 地址
+
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/cabdd905-ad9c-465f-8991-dc1c8013a2ee)
+
+### 設定 mprj
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/a4c8561e-141a-4270-b72c-2c4b97082ee7)
 
+### 輸入 coef
+
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/fef4d55f-ec59-4ae1-84e0-e06881ebe18d)
+
+### 利用mprj來當checkbit
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/f02b8ac7-2c57-46d8-96cf-5818d76c7293)
 
+### fir.c (給 ap_start, check ap_control[4] 給 sstdata, check ap_control[5] 讀 smtdata)
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/c990f772-234f-48ae-aca9-e0e4996da2a1)
 
 
