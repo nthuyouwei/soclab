@@ -11,6 +11,9 @@
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/f02b8ac7-2c57-46d8-96cf-5818d76c7293)
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/c990f772-234f-48ae-aca9-e0e4996da2a1)
+
+
 ## testbench
 main code:
 
