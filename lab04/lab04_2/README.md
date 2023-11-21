@@ -17,6 +17,12 @@ test result(a cycle 25 ns):
 
 ## data_path
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/66417210-0a2a-4f0a-9278-e3c7237a07b3)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/70ae4ec0-5cb4-4fb5-bbe8-3e150802cffd)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/fd481189-6664-4d16-98d5-2223ef59791d)
+
 
 ## waveform analyze
 
