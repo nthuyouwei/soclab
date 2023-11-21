@@ -3,6 +3,13 @@
 110011141 陳昇達
 ## Firmware code 
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/cabdd905-ad9c-465f-8991-dc1c8013a2ee)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/a4c8561e-141a-4270-b72c-2c4b97082ee7)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/fef4d55f-ec59-4ae1-84e0-e06881ebe18d)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/f02b8ac7-2c57-46d8-96cf-5818d76c7293)
 
 ## testbench
 main code:
