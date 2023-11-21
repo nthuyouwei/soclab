@@ -45,6 +45,8 @@ test result(a cycle 25 ns):
 
 ## waveform analyze
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/a3e4a32b-0197-497c-92fc-226c71c34d5d)
+
 
 ## synthesis analyze
 
