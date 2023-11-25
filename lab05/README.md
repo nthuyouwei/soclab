@@ -28,4 +28,5 @@ source run_vivado.sh
 ## counter_la
 [la_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/la_result.ipynb)
 ## counter_wb
-[wb_result.ipynb]()
+[wb_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/wb_result.ipynb)
+
