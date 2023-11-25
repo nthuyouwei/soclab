@@ -1,4 +1,36 @@
-# 操作說明
+
+# Carvael SoC FPGA
+為了模擬 Efabless Caravelharness SoC 模擬環境，設計的block diagram 如下圖所示。讓 Caravel Verilog 測試台程式碼可以輕鬆轉換為 Jupyter Notebook Python 測試台程式碼，如 [la_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/la_result.ipynb) 所示
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/9c66b9e9-646e-4a41-9174-4812dce947af)
+
+我們也可以開啟vivado的block deseign 來查看。
+
+```
+cd ~/soclab/lab05/vvd_caravel_fpga
+vivado vvd_caravel_fpga.xpr
+```
+載入 Vivado 專案後，點擊 IP INTEGRATOR 中的 Open Block Design，您可以看到圖表視窗。
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/d4445fef-c97c-4277-aed6-2091660a4f43)
+
+其中4個較重要的IP
+
+## ResetControl: A memory-mapped-io to control Caravel reset pin. 
+
+
+## read_romcode: read the firmware hex data from PS/DDR memory to FPGA BRAM.
+
+
+## caravel_ps: It allows the PS side to use memory-mapped IO to read/write mprj pins. 
+
+
+## spiflash: It emulates spiflash device read behavior. It reads data from BRAM.
+
+
+
+
+# 產生上面Caravel SOC FPGA 的.bit 和 .hwh 檔案
 
 
 ```
@@ -7,19 +39,19 @@ git clone https://github.com/bol-edu/caravel-soc_fpga-lab.git ~/caravel-soc_fpga
 
 先設定PYNQ-Z2板子 [參考](https://github.com/bol-edu/caravel-soc_fpga#generate-caravel-soc-fpga-bitstream-from-xilinx-vivado)
 
-自動建置 Vitis HLS 專案並匯出 IP
+自動建置 Vitis HLS 專案並匯出 IP(上面所說明的IP)
 
 ```
 source run_vitis.sh
 ```
-Caravel-FPGA 建立 Vivado 專案([vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga))並執行「write_bitstream」步驟以產生位元流
+Caravel-FPGA 建立 Vivado 專案( [vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga) )並執行「write_bitstream」步驟以產生位元流
 1. run_vivado.sh：產生時脈為 50MHz 的使用者專案計數器的位元流
 2. run_vivado_gcd.sh：產生時脈為 10MHz 的使用者專案 gcd 的位元流
 
 ```
 source run_vivado.sh
 ```
-最後jupter會用到的.bit 和.hwh會複製到 [jupyter_notebooks_project](https://github.com/nthuyouwei/soclab/tree/main/lab05/jupyter_notebooks_project)
+這裡會把jupter會用到的.bit 和.hwh複製到 [jupyter_notebooks_project](https://github.com/nthuyouwei/soclab/tree/main/lab05/jupyter_notebooks_project)
 
 上傳[jupyter_notebooks_project](https://github.com/nthuyouwei/soclab/tree/main/lab05/jupyter_notebooks_project)至遠端PYNQ-Z2做驗證 (如lab01、lab02)
 
@@ -30,7 +62,7 @@ source run_vivado.sh
 ## counter_wb
 [wb_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/wb_result.ipynb)
 
-# Utilization of IP
+# Utilization of IP in the caravel fpga
 這些都結果可以在[vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs) 底下翻找到。
 ## Caravel([design_1_caravel_0_0_utilization_synth.rpt](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_caravel_0_0_synth_1/design_1_caravel_0_0_utilization_synth.rpt))
 
