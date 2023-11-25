@@ -2,7 +2,7 @@
 
 
 ```
-git clone https://github.com/bol-edu/caravel-soc_fpga-lab.git ~caravel-soc_fpga-lab
+git clone https://github.com/bol-edu/caravel-soc_fpga-lab.git ~/caravel-soc_fpga-lab
 ```
 
 先設定zynq板子 [參考](https://github.com/bol-edu/caravel-soc_fpga#generate-caravel-soc-fpga-bitstream-from-xilinx-vivado)
