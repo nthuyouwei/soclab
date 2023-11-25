@@ -17,24 +17,24 @@ vivado vvd_caravel_fpga.xpr
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/d4445fef-c97c-4277-aed6-2091660a4f43)
 
-其中4個較重要的IP
-
-## ResetControl: A memory-mapped-io to control Caravel reset pin. 
+## 其中4個較重要的IP
+### ResetControl: A memory-mapped-io to control Caravel reset pin.
+  
 利用 xilinx hls建立。 hls code: [output_pin.cpp
 ](https://github.com/nthuyouwei/soclab/blob/main/lab05/vitis_hls_project/hls_output_pin/src/output_pin.cpp)
 
 然後如 lab01 一樣匯出IP。 
 
-## read_romcode: read the firmware hex data from PS/DDR memory to FPGA BRAM.
+### read_romcode: read the firmware hex data from PS/DDR memory to FPGA BRAM.
 利用 xilinx hls建立。 hls code: [read_romcode.cpp](https://github.com/nthuyouwei/soclab/blob/main/lab05/vitis_hls_project/hls_read_romcode/src/read_romcode.cpp)
 
 然後如 lab01 一樣匯出IP。 
 
-## caravel_ps: It allows the PS side to use memory-mapped IO to read/write mprj pins. 
+### caravel_ps: It allows the PS side to use memory-mapped IO to read/write mprj pins. 
 利用 xilinx hls建立。 hls code: [caravel_ps.cpp](https://github.com/nthuyouwei/soclab/blob/main/lab05/vitis_hls_project/hls_caravel_ps/src/caravel_ps.cpp)
 
 然後如 lab01 一樣匯出IP。 
-## spiflash: It emulates spiflash device read behavior. It reads data from BRAM.
+### spiflash: It emulates spiflash device read behavior. It reads data from BRAM.
 直接撰寫verilog 。 verilog code: [spiflash.v](https://github.com/bol-edu/caravel-soc_fpga-lab/blob/main/labi/vvd_srcs/spiflash.v)
 
 
