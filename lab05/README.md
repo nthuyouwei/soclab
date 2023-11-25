@@ -20,7 +20,7 @@ vivado vvd_caravel_fpga.xpr
 利用 xilinx hls建立。 hls code: [output_pin.cpp
 ](https://github.com/nthuyouwei/soclab/blob/main/lab05/vitis_hls_project/hls_output_pin/src/output_pin.cpp)
 
-然後如 lab1 一樣匯出IP。 
+然後如 lab01 一樣匯出IP。 
 
 ## read_romcode: read the firmware hex data from PS/DDR memory to FPGA BRAM.
 利用 xilinx hls建立。 hls code: [read_romcode.cpp](https://github.com/nthuyouwei/soclab/blob/main/lab05/vitis_hls_project/hls_read_romcode/src/read_romcode.cpp)
