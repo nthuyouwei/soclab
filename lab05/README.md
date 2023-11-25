@@ -25,6 +25,6 @@ source run_vivado.sh
 
 # The result on the jupter_notebook
 
-## 
+## counter_la
 
-## 
+## counter_wb
