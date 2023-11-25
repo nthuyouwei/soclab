@@ -31,6 +31,7 @@ source run_vivado.sh
 [wb_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/wb_result.ipynb)
 
 # utilization of IP
+這些結果可以在[vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs) 底下翻找到。
 ## 
 
 ##
