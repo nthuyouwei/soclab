@@ -30,9 +30,13 @@ source run_vivado.sh
 ## counter_wb
 [wb_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/wb_result.ipynb)
 
-# utilization of IP
-這些結果可以在[vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs) 底下翻找到。
-## Caravel
+# Utilization of IP
+這些都結果可以在[vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs) 底下翻找到。
+## Caravel([design_1_caravel_0_0_utilization_synth.rpt](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_caravel_0_0_synth_1/design_1_caravel_0_0_utilization_synth.rpt))
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/4ab65121-61d1-41b6-a989-0e24168963a0)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/a8def272-8497-41ba-a8ec-13f981f8b768)
 
 ## caravel_ps
 
