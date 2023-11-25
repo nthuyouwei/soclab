@@ -1,0 +1,135 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d FUNCTIONAL= -d SIM= -d DUNIT_DELAY=1 -d USE_POWER_PINS= -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot counter_wb_tb_behav xil_defaultlib.counter_wb_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'VPWR' is not connected on this instance [/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:8374]
+WARNING: [VRFC 10-5021] port 'VPWR' is not connected on this instance [/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:8383]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/caravel.v" Line 77. Module caravel_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/chip_io.v" Line 59. Module chip_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 68. Module mprj_io_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" Line 124. Module boledu_io doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v" Line 38. Module mgmt_core_wrapper doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v" Line 4. Module mgmt_core doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/vip/RAM256.v" Line 1. Module RAM256_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/vip/RAM128.v" Line 1. Module RAM128_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v" Line 46. Module VexRiscv doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v" Line 4305. Module InstructionCache doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v" Line 99. Module housekeeping doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v" Line 1503. Module boledu_fd_sc_hd__clkbuf_8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/housekeeping_spi.v" Line 75. Module housekeeping_spi doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v" Line 1503. Module boledu_fd_sc_hd__clkbuf_8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v" Line 1503. Module boledu_fd_sc_hd__clkbuf_8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v" Line 1503. Module boledu_fd_sc_hd__clkbuf_8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" Line 65. Module gpio_defaults_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" Line 98. Module gpio_control_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" Line 98. Module gpio_control_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" Line 98. Module gpio_control_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" Line 98. Module gpio_control_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" Line 98. Module gpio_control_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" Line 98. Module gpio_control_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" Line 98. Module gpio_control_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" Line 98. Module gpio_control_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" Line 98. Module gpio_control_block doesn't have a timescale but at least one module in design has a timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4099' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.boledu_io
+Compiling module xil_defaultlib.mprj_io_default
+Compiling module xil_defaultlib.chip_io
+Compiling module xil_defaultlib.RAM256_default
+Compiling module xil_defaultlib.RAM128_default
+Compiling module xil_defaultlib.InstructionCache
+Compiling module xil_defaultlib.VexRiscv
+Compiling module xil_defaultlib.mgmt_core
+Compiling module xil_defaultlib.mgmt_core_wrapper
+Compiling module xil_defaultlib.counter
+Compiling module xil_defaultlib.user_proj_example
+Compiling module xil_defaultlib.user_project_wrapper
+Compiling module xil_defaultlib.boledu_fd_sc_hd__clkbuf_8
+Compiling module xil_defaultlib.housekeeping_spi
+Compiling module xil_defaultlib.housekeeping
+Compiling module xil_defaultlib.gpio_defaults_block
+Compiling module xil_defaultlib.gpio_control_block
+Compiling module xil_defaultlib.caravel_default
+Compiling module xil_defaultlib.spiflash2(FILENAME="counter_wb.h...
+Compiling module xil_defaultlib.counter_wb_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot counter_wb_tb_behav

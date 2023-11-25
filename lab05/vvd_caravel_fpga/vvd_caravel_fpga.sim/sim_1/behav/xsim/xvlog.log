@@ -1,0 +1,40 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/vip/RAM128.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM128
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/vip/RAM256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM256
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VexRiscv
+INFO: [VRFC 10-311] analyzing module InstructionCache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/caravel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module caravel
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/chip_io.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chip_io
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gpio_control_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gpio_defaults_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module housekeeping
+INFO: [VRFC 10-311] analyzing module boledu_fd_sc_hd__clkbuf_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/housekeeping_spi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module housekeeping_spi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mgmt_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mgmt_core_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mprj_io
+INFO: [VRFC 10-311] analyzing module boledu_io
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/vip/spiflash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spiflash2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module user_proj_example
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/user/user_project_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module user_project_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/counter_wb/counter_wb_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_wb_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_caravel_fpga/vvd_caravel_fpga.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

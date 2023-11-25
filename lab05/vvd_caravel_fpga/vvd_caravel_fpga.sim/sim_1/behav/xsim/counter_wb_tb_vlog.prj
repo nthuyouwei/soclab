@@ -1,0 +1,24 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/caravel-soc_fpga-lab/labi/vvd_srcs/caravel_soc/rtl/header/defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/5765/hdl" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "FUNCTIONAL=" -d "SIM=" -d "DUNIT_DELAY=1" -d "USE_POWER_PINS=" \
+"../../../../../vvd_srcs/caravel_soc/vip/RAM128.v" \
+"../../../../../vvd_srcs/caravel_soc/vip/RAM256.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/caravel.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/chip_io.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/housekeeping.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/housekeeping_spi.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" \
+"../../../../../vvd_srcs/caravel_soc/vip/spiflash.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_project_wrapper.v" \
+"../../../../../vvd_srcs/caravel_soc/counter_wb/counter_wb_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
