@@ -26,5 +26,6 @@ source run_vivado.sh
 # The result on the jupter_notebook
 
 ## counter_la
-
+[la_result.ipynb]()
 ## counter_wb
+[wb_result.ipynb]()
