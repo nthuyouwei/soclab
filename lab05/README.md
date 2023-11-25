@@ -37,10 +37,7 @@ vivado vvd_caravel_fpga.xpr
 ### spiflash: It emulates spiflash device read behavior. It reads data from BRAM.
 直接撰寫verilog 。 verilog code: [spiflash.v](https://github.com/bol-edu/caravel-soc_fpga-lab/blob/main/labi/vvd_srcs/spiflash.v)
 
-
-
 # Caravel SOC FPGA 的.bit 和 .hwh 檔案
-
 
 ```
 git clone https://github.com/bol-edu/caravel-soc_fpga-lab.git ~/caravel-soc_fpga-lab
@@ -62,16 +59,66 @@ source run_vivado.sh
 ```
 這裡會把jupter會用到的.bit 和.hwh複製到 [jupyter_notebooks_project](https://github.com/nthuyouwei/soclab/tree/main/lab05/jupyter_notebooks_project)
 
-上傳[jupyter_notebooks_project](https://github.com/nthuyouwei/soclab/tree/main/lab05/jupyter_notebooks_project)至遠端PYNQ-Z2做驗證 (如lab01、lab02)
+# Jupyter Notebook testbench example code
 
-# The result on the jupter_notebook
+lab03、lab04都是在simiulator的環境下利用verilog 來寫testbench code。現在要轉換至 Jupyter Notebook Python 測試平台，所以利用python來寫testbench code (如:[caravel_fpga.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/jupyter_notebooks_project/caravel_fpga.ipynb))
+
+## 說明
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/0736b9af-e6e8-4a5e-a443-80c2e471a528)
+1. load new overlay(.bit)
+   
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/ee400eb6-8c3b-434e-bced-456ff74931fa)
+
+2. instance IPs by navigating the overlay object
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/45b3cd22-447e-4f43-afd7-151b3d12a1ab)
+
+3. 選擇要匯入的firmwave
+   
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/6ff145cb-c1fc-448d-a3ca-0470216aa569)
+
+4. 計算rom size
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/520ac115-b291-4a33-841e-3ed07b32ab08)
+
+
+5. write to bram
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/e9bcd416-00ed-4fea-b789-ca03a0bc6afc)
+
+
+6. Release reset to make Caravel-soc start execute firmware code
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/313c6b3d-f6a3-43df-af0c-a36d13350dfc)
+
+7. 可以查看mprj[31:0]
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/a8dea6cd-c74c-408f-877d-7c579fc561b0)
+
+
+# Run on the jupter_notebook
+我們需要的檔案有:
+- compiled RISC-V firmwares : .hex
+- FPGA bitstream and HWH file : .bit .hwh 
+- Jupyter Notebook testbench example code: .ipynq
+
+這裡所需的檔案都放置在 [jupyter_notebooks_project](https://github.com/nthuyouwei/soclab/tree/main/lab05/jupyter_notebooks_project)
+
+上傳 [jupyter_notebooks_project](https://github.com/nthuyouwei/soclab/tree/main/lab05/jupyter_notebooks_project)至遠端PYNQ-Z2做驗證 ( 如 lab01 一樣或者可以參考[reference](https://github.com/bol-edu/caravel-soc_fpga#validation-on-pynq-fpga-board))
+
+我們要測試counter_la和counter_wb，可以更改[caravel_fpga.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/jupyter_notebooks_project/caravel_fpga.ipynb)中的code來做驗證。
+
+```
+fiROM = open("counter_la.hex", "r+")
+#fiROM = open("counter_wb.hex", "r+")
+```
 
 ## counter_la
 [la_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/la_result.ipynb)
 ## counter_wb
 [wb_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/wb_result.ipynb)
 
-# Utilization of IP in the caravel fpga
+# Utilization of IP in the Caravel SoC FPGA
 這些都結果可以在[vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs) 底下翻找到。
 ## Caravel([design_1_caravel_0_0_utilization_synth.rpt](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_caravel_0_0_synth_1/design_1_caravel_0_0_utilization_synth.rpt))
 
