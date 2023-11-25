@@ -39,7 +39,7 @@ vivado vvd_caravel_fpga.xpr
 
 
 
-# 產生上面Caravel SOC FPGA 的.bit 和 .hwh 檔案
+# Caravel SOC FPGA 的.bit 和 .hwh 檔案
 
 
 ```
