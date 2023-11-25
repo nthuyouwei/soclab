@@ -38,13 +38,25 @@ source run_vivado.sh
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/a8def272-8497-41ba-a8ec-13f981f8b768)
 
-## caravel_ps
+## caravel_ps([design_1_caravel_ps_0_0_utilization_synth.rpt](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_caravel_ps_0_0_synth_1/design_1_caravel_ps_0_0_utilization_synth.rpt))
 
-## spiflash
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/65cb289e-e4b1-4e0e-93fb-53d265d34ef5)
 
-## read_romcod
+## spiflash([design_1_spiflash_0_0_utilization_synth.rpt](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_spiflash_0_0_synth_1/design_1_spiflash_0_0_utilization_synth.rpt))
 
-## ResetControl
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/f3ca490d-adc7-485e-b992-56f7066157aa)
+
+
+## read_romcod([design_1_read_romcode_0_0_utilization_synth.rpt](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_read_romcode_0_0_synth_1/design_1_read_romcode_0_0_utilization_synth.rpt))
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/f9a039d7-e37c-4d78-bd1d-17449dc4153f)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/0eef566a-738c-42d9-b009-550fdb7517b3)
+
+## ResetControl([design_1_output_pin_0_0_utilization_synth.rpt](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_output_pin_0_0_synth_1/design_1_output_pin_0_0_utilization_synth.rpt))
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/1288787f-40f1-41da-985b-685c1cc9f7e7)
+
 
 ## BRAM([design_1_blk_mem_gen_0_0_utilization_synth.rpt](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_blk_mem_gen_0_0_synth_1/design_1_blk_mem_gen_0_0_utilization_synth.rpt))
 
