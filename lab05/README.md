@@ -5,7 +5,7 @@
 git clone https://github.com/bol-edu/caravel-soc_fpga-lab.git ~/caravel-soc_fpga-lab
 ```
 
-先設定zynq板子 [參考](https://github.com/bol-edu/caravel-soc_fpga#generate-caravel-soc-fpga-bitstream-from-xilinx-vivado)
+先設定PYNQ-Z2板子 [參考](https://github.com/bol-edu/caravel-soc_fpga#generate-caravel-soc-fpga-bitstream-from-xilinx-vivado)
 
 自動建置 Vitis HLS 專案並匯出 IP
 
