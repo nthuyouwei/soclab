@@ -26,6 +26,6 @@ source run_vivado.sh
 # The result on the jupter_notebook
 
 ## counter_la
-[la_result.ipynb]()
+[la_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/la_result.ipynb)
 ## counter_wb
 [wb_result.ipynb]()
