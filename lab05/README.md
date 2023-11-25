@@ -114,9 +114,32 @@ fiROM = open("counter_la.hex", "r+")
 ```
 
 ## counter_la
-[la_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/la_result.ipynb)
+
+Compare the mprj_o value =0xab51(16-31bits)should sync to final result in the firmware code.
+
+testbench on jupter_notebook ([la_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/la_result.ipynb)):
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/93f470cb-e526-4c3d-8798-98d6b6fa9263)
+
+firmware code ([counter_la.c](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_srcs/caravel_soc/counter_la/counter_la.c)):
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/e4c378d2-c126-4784-893d-eac60bb53169)
+
+
 ## counter_wb
-[wb_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/wb_result.ipynb)
+
+Compare the mprj_o value =0xab61(16-31bits)should sync to final result in the firmware code.
+
+testbench on jupter_notebook ([wb_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/wb_result.ipynb)
+)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/9a68b166-1777-4353-aee9-0d0fb68010ef)
+
+firmware code ([counter_wb.c](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_srcs/caravel_soc/counter_wb/counter_wb.c))
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/cd43c668-b03b-4516-b6d1-5f637aa0c05d)
+
+
 
 # Utilization of IP in the Caravel SoC FPGA
 這些都結果可以在[vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs) 底下翻找到。
