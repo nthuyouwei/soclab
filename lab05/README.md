@@ -30,3 +30,14 @@ source run_vivado.sh
 ## counter_wb
 [wb_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/wb_result.ipynb)
 
+# utilization of IP
+## 
+
+##
+
+##
+
+##
+
+##
+
