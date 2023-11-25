@@ -1,4 +1,7 @@
 
+110020015 劉祐瑋  
+110011141 陳昇達
+
 # Carvael SoC FPGA
 為了模擬 Efabless Caravelharness SoC 模擬環境，設計的block diagram 如下圖所示。讓 Caravel Verilog 測試台程式碼可以輕鬆轉換為 Jupyter Notebook Python 測試台程式碼，如 [la_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/la_result.ipynb) 所示
 
