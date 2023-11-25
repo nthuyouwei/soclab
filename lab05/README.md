@@ -51,8 +51,8 @@ git clone https://github.com/bol-edu/caravel-soc_fpga-lab.git ~/caravel-soc_fpga
 source run_vitis.sh
 ```
 Caravel-FPGA 建立 Vivado 專案( [vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga) )並執行「write_bitstream」步驟以產生位元流
-1. run_vivado.sh：產生時脈為 50MHz 的使用者專案計數器的位元流
-2. run_vivado_gcd.sh：產生時脈為 10MHz 的使用者專案 gcd 的位元流
+1. run_vivado.sh： generate bitstream of user project counter with clock 50MHz
+2. run_vivado_gcd.sh： generate bitstream of user project gcd with clock 10MHz
 
 ```
 source run_vivado.sh
