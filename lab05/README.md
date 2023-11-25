@@ -32,13 +32,22 @@ source run_vivado.sh
 
 # utilization of IP
 這些結果可以在[vvd_caravel_fpga](https://github.com/nthuyouwei/soclab/tree/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs) 底下翻找到。
-## 
+## Caravel
 
-##
+## caravel_ps
 
-##
+## spiflash
 
-##
+## read_romcod
 
-##
+## ResetControl
+
+## BRAM([design_1_blk_mem_gen_0_0_utilization_synth.rpt](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_blk_mem_gen_0_0_synth_1/design_1_blk_mem_gen_0_0_utilization_synth.rpt))
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/c7a948c4-3524-4bb9-9dd1-3956ced920c9)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/f091fc52-88da-4df9-bbd7-e634b75dd44d)
+
+
+
 
