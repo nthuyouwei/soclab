@@ -19,4 +19,6 @@ Caravel-FPGA 建立 Vivado 專案([vvd_caravel_fpga](https://github.com/nthuyouw
 ```
 source run_vivado.sh
 ```
-最後jupter會用到的.bit 和.hwh會複製到 [jupyter_notebooks_project]()
+最後jupter會用到的.bit 和.hwh會複製到 [jupyter_notebooks_project](https://github.com/nthuyouwei/soclab/tree/main/lab05/jupyter_notebooks_project)
+
+上傳[jupyter_notebooks_project](https://github.com/nthuyouwei/soclab/tree/main/lab05/jupyter_notebooks_project)至遠端PYNQ-Z2 (如lab01、lab02)
