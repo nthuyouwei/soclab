@@ -176,5 +176,5 @@ firmware code ([counter_wb.c](https://github.com/nthuyouwei/soclab/blob/main/lab
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/f091fc52-88da-4df9-bbd7-e634b75dd44d)
 
 
-hi
+
 
