@@ -30,7 +30,8 @@ main code:
 
 test result(a cycle 25 ns):
 
-![image](https://github.com/nthuyouwei/soclab/assets/145022311/9ada4155-d4e9-4665-9b35-78b815b72b1b)
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/98b95f15-5ed4-406c-a557-617bf2ede10c)
+
 
 
 
