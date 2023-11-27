@@ -26,7 +26,8 @@
 ## testbench
 main code:
 
-![image](https://github.com/nthuyouwei/soclab/assets/145022311/6745060b-2f0c-4be4-bf8d-37a2a69f657d)
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/52023cf2-2174-45a4-a580-76a5bacb5db9)
+
 
 test result(a cycle 25 ns):
 
