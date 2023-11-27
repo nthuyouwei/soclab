@@ -75,11 +75,11 @@ module exmem_fir #(
     assign wbs_dat_o = rdata;
     assign wdata = wbs_dat_i;
     assign addr =wbs_adr_i;
-    assign wbs_ack_o = (counter==4'd11);
+    assign wbs_ack_o = (counter==4'd1);
     
    assign n_count=counter+4'b0001;
     always @( posedge wb_clk_i or posedge wb_rst_i )begin
-    if(wb_rst_i|n_count==4'd12) begin
+    if(wb_rst_i|n_count==4'd2) begin
        counter<=4'd0;
     end
     else if (valid) begin

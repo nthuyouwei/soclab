@@ -167,6 +167,7 @@ module counter_la_fir_tb;
 		$display("%0d LA Test 2 passed, at ",k+1,  $realtime, " ns");
           end
 		#10000;
+		$display("ie : a cycle = 25ns");
 		$finish;
 	end
 

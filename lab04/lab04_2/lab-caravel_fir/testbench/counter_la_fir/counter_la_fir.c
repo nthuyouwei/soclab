@@ -45,7 +45,7 @@ extern int* fir();
 		- Outputs message to the UART when the test concludes successfuly
 */
 
-void main()
+void __attribute__ ( ( section ( ".mprjram" ) ) ) main()
 {
 	int j;
 	/* Set up the housekeeping SPI to be connected internally so	*/
