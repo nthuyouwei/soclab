@@ -157,17 +157,19 @@ module counter_la_fir_tb;
 	end
 
 
-	integer k;
+	integer k,cycs;
 	initial begin
 	  for (k=0;k<3;k=k+1)begin
+	        cycs=0;
 		wait(checkbits == 16'h00A5);
 		$display("%0d LA Test 1 started, at ",k+1, $realtime, " ns");
          
-		wait(checkbits == 16'h765A);//Y=10614
+		while(checkbits != 16'h765A)@(posedge clock) cycs=cycs+1;//Y=10614
 		$display("%0d LA Test 2 passed, at ",k+1,  $realtime, " ns");
+		$display("total cycles: %0d cycles ",cycs);
+		
           end
 		#10000;
-		$display("ie : a cycle = 25ns");
 		$finish;
 	end
 
