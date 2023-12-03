@@ -6,7 +6,7 @@ riscv32-unknown-elf-gcc -Wl,--no-warn-rwx-segments -g \
 	-I../../firmware \
 	-march=rv32i -mabi=ilp32 -D__vexriscv__ \
 	-Wl,-Bstatic,-T,../../firmware/sections.lds,--strip-discarded \
-	-ffreestanding -nostartfiles -o counter_la_fir.elf ../../firmware/crt0_vex.S ../../firmware/isr.c fir.c counter_la_fir.c
+	-ffreestanding -nostartfiles -O1 -o counter_la_fir.elf ../../firmware/crt0_vex.S ../../firmware/isr.c fir.c counter_la_fir.c
 # -nostartfiles	
 riscv32-unknown-elf-objcopy -O verilog counter_la_fir.elf counter_la_fir.hex
 riscv32-unknown-elf-objdump -D counter_la_fir.elf > counter_la_fir.out
