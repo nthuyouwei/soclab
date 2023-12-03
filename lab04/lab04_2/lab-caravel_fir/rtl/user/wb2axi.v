@@ -64,7 +64,7 @@ module wb2axi #(
    	assign fir_valid = wbs_stb_i & wbs_cyc_i;
    	assign fir_we    = wbs_we_i & wbs_cyc_i;
    	assign fir_addr  = wbs_adr_i[11:0];
-   	assign wbs_ack_o = (w_count==1) | (ss_tvalid & ss_tready) | (sm_tvalid & sm_tready) | rvalid; 
+   	assign wbs_ack_o = (w_count==1) | (ss_tvalid & ss_tready) | (sm_tvalid) | rvalid; 
    	//wready | rvalid | (ss_tvalid & ss_tready) | (sm_tvalid & sm_tready);
    	reg  [1:0] w_count;
    	wire [1:0] n_count;
