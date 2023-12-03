@@ -96,7 +96,7 @@ module fir
     assign ap_done   = (state==DONE) ? 1 : 0;
     assign ss_tready = (state==WAIT) ? 1 : 0;
     assign sm_tvalid = (counter==14) ? 1 : 0;
-    assign sm_hs     = sm_tready & sm_tready;
+    assign sm_hs     = sm_tready & sm_tvalid;
     assign sm_tlast  = (state==LAST & counter==14 & sm_hs) ? 1 : 0;
     assign data_WE   = (ss_tvalid | state==INIT) ? 4'b1111 : 4'b0;
     assign data_EN   = 1;
