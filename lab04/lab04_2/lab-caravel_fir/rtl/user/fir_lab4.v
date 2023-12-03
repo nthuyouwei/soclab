@@ -359,14 +359,20 @@ module fir
                     next_counter = 14;
                 end
                 else if(counter == 14) begin
+                    if (sm_tready==1) begin
+                     next_counter = 15;
+                    end
+                    else begin 
+                    
                     next_counter = 14;
+                    end
                 end
                 else begin 
                     next_counter = 0;
                 end
             end
             CALC: begin 
-                if (counter == 14) begin 
+                if (counter == 15) begin 
                     next_counter = Tap_addr + 1;
                 end
                 else begin 
@@ -374,7 +380,7 @@ module fir
                 end
             end
             LAST: begin 
-                if (counter == 14) begin 
+                if (counter == 15) begin 
                     next_counter = Tap_addr + 1;
                 end
                 else begin 
@@ -392,7 +398,13 @@ module fir
                     next_counter = 14;
                 end
                 else if(counter == 14) begin
+                    if (sm_tready==1) begin
+                     next_counter = 15;
+                    end
+                    else begin 
+                    
                     next_counter = 14;
+                    end
                 end
                 else begin 
                     next_counter = 0;
