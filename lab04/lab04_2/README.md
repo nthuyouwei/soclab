@@ -80,15 +80,21 @@ test result(a cycle 25 ns):
 
 可以發現優化後沒有stack pointer，也變得更加簡潔。
 
-優化後的waveform:
+第一次優化後的waveform:
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/5fb129e9-4896-4038-9406-197329c8ce03)
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/53a20098-fd72-45b8-a360-356d0c113052)
 
-這時sstvalid->smtready花費的cycle數高達 29 cycle 以及smtready->sstvalid花費的cycle數高達 72 cycle，整體throughput為101cycle。在這可以明顯的發現cpu有些時候不會再跑去bram重新讀指令，猜測可能直接經由cache來運作。
+這時sstvalid->smtready花費的cycle數為 29 cycle 以及smtready->sstvalid花費的cycle數為 72 cycle，整體throughput為101cycle。在這可以明顯的發現cpu有些時候不會再跑去bram重新讀指令，猜測可能直接經由cache來運作。除此之外，我們發現3000x0000在送y值之前讀了兩次，對應到了while迴圈判斷是否可以接收y，這造成不必要的cycle再跑一次至3000x0000，但我們發現其實可以直接打進去交給硬體判斷，上圖可以發現都是smtvalid先拉至1後等待smtready完成傳遞，但如果我不利用while迴圈來判斷，而是直接先給smtready拉至1，然後等待smtvalid完成傳遞，這樣可能會花更少的cycle。
 
+第二次優化後的waveform:
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/7adb4fd3-b670-4b59-9b9b-0e448e65e96d)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/7cdabf19-3686-40b8-9f13-d01432ea5309)
+
+這時sstvalid->smtready花費的cycle數為 15 cycle 以及smtready->sstvalid花費的cycle數為 16 cycle，整體throughput為31cycle。而且可以發現cpu完全不用至bram重新讀取指令。
 
 ## synthesis analyze
 
