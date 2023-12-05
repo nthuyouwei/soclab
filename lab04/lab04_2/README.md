@@ -52,6 +52,23 @@ test result(a cycle 25 ns):
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/a3e4a32b-0197-497c-92fc-226c71c34d5d)
 
+## 優化分析
+
+我們先從未優化前的waveform觀察!
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/1eac1c40-3bcd-46e1-936a-1386342a25b0)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/f4217a5e-2218-402c-b3f6-9edba409f2f2)
+
+我們可以發現整個throughput為197cycle，但可以發現我們硬體做計算時只有14cycle就可以做完，所以問體是卡在cpu上，我們可以發現wb_addr會跑去3800x0000的位置做其他事情，這也導致軟體的部分，也就是sstvalid->smtready(對應到 c code 中 reg_fir_x = i 到 outputsignal[i] = reg_fir_y)花費的cycle數高達 68 cycle 以及smtready->sstvalid(對應到 c code 中 outputsignal[i] = reg_fir_y 迴圈至  reg_fir_x = i)花費的cycle數高達 129 cycle。所以我們要想辦法減少這兩部分。剛剛說到我們發現cpu會跑去做其他事情，所以我們打開assembly code 去看有沒有哪部分可以優化。
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/3007eb72-15bd-45be-a469-1ad4ca77ac90)
+
+我們可以發現assembly code 中有這一部分，它會導致cpu進行指令的緩存刷新，也正因為如此他才要再去3800讀取code。 所以我們利用 -o1這個指令來讓編譯器幫我們優化(在run_sim中修改如下)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/7a3e828a-d538-4fbe-a2a8-008192b6cb00)
+
+
 
 ## synthesis analyze
 
