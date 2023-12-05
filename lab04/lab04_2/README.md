@@ -68,6 +68,26 @@ test result(a cycle 25 ns):
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/7a3e828a-d538-4fbe-a2a8-008192b6cb00)
 
+優化後我們可以先簡單的對比一下優化前後assembly code 的差別
+
+未優化:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/730d68ad-5b6f-4139-9ad5-b3c6785e76ac)
+
+優化後:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/c67d4077-71a6-47a5-b412-42449245c99f)
+
+可以發現優化後沒有stack pointer，也變得更加簡潔。
+
+優化後的waveform:
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/5fb129e9-4896-4038-9406-197329c8ce03)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/53a20098-fd72-45b8-a360-356d0c113052)
+
+這時sstvalid->smtready花費的cycle數高達 29 cycle 以及smtready->sstvalid花費的cycle數高達 72 cycle，整體throughput為101cycle。在這可以明顯的發現cpu有些時候不會再跑去bram重新讀指令，猜測可能直接經由cache來運作。
+
 
 
 ## synthesis analyze
