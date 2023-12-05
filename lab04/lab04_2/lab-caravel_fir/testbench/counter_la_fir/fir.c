@@ -23,11 +23,11 @@ int* __attribute__ ( ( section ( ".mprjram" ) ) ) fir(){
 	
 	while(i<N){
 	       
-	        while((reg_fir_control >> 4) & 1 !=1); // external signal x[n] ready, wait until bit[4] = 1
+	        //while((reg_fir_control >> 4) & 1 !=1); // external signal x[n] ready, wait until bit[4] = 1
 	      //while((reg_fir_control & 0x10 )==0);
 		reg_fir_x = i;
 		
-		while((reg_fir_control >> 5) & 1!=1); // external signal y[n] ready, wait until bit[5] = 1
+		//while((reg_fir_control >> 5) & 1!=1); // external signal y[n] ready, wait until bit[5] = 1
 		outputsignal[i] = reg_fir_y;
 		i=i+1;
 	}
