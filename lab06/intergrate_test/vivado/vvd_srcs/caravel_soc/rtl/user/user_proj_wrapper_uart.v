@@ -81,6 +81,45 @@ module user_project_wrapper #(
 /*--------------------------------------*/
 /* User project is instantiated  here   */
 /*--------------------------------------*/
+
+    wire [38-1:0] ex_out;
+    wire [38-1:0] uart_out;
+    wire [38-1:0] ex_oeb;
+    wire [38-1:0] uart_oeb;  
+    wire [2:0] ex_irq;
+    wire [2:0] uart_irq;
+    assign user_irq=  uart_irq;
+    //assign wbs_ack_o=uart_ack|ex_ack;
+    assign wbs_ack_o = (wbs_adr_i[31:24]==8'h38) ? ex_ack: uart_ack;
+    assign wbs_dat_o = (wbs_adr_i[31:24]==8'h38) ? ex_dat_o: uart_dat_o;
+    assign io_out =   uart_out;
+    assign io_oeb =   uart_oeb;
+// ------ when adr=3800_0000 to exmemfir------
+    wire ex_stb;
+    wire ex_cyc;
+    wire ex_we;
+    wire [3:0] ex_sel;
+    wire [31:0] ex_dat_o;
+    wire ex_ack;
+    assign ex_stb = wbs_stb_i & (wbs_adr_i[31:24]==8'h38);
+    assign ex_cyc = wbs_cyc_i & (wbs_adr_i[31:24]==8'h38);
+    assign ex_we = wbs_we_i & (wbs_adr_i[31:24]==8'h38);
+    assign ex_sel = wbs_sel_i & {4{(wbs_adr_i[31:24]==8'h38)}};
+    
+    
+    
+    wire uart_stb;
+    wire uart_cyc;
+    wire uart_we;
+    wire [3:0] uart_sel;
+    wire [31:0] uart_dat_o;
+    wire uart_ack;
+    assign uart_stb = wbs_stb_i & (wbs_adr_i[31:24]==8'h30);
+    assign uart_cyc = wbs_cyc_i & (wbs_adr_i[31:24]==8'h30);
+    assign uart_we = wbs_we_i & (wbs_adr_i[31:24]==8'h30);
+    assign uart_sel = wbs_sel_i & {4{(wbs_adr_i[31:24]==8'h30)}};
+
+
 uart uart (
 `ifdef USE_POWER_PINS
 	.vccd1(vccd1),	// User area 1 1.8V power
@@ -91,23 +130,63 @@ uart uart (
 
     // MGMT SoC Wishbone Slave
 
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_cyc_i(wbs_cyc_i),
-    .wbs_we_i(wbs_we_i),
-    .wbs_sel_i(wbs_sel_i),
+    .wbs_stb_i(uart_stb),
+    .wbs_cyc_i(uart_cyc),
+    .wbs_we_i(uart_we),
+    .wbs_sel_i(uart_sel),
     .wbs_dat_i(wbs_dat_i),
     .wbs_adr_i(wbs_adr_i),
-    .wbs_ack_o(wbs_ack_o),
-    .wbs_dat_o(wbs_dat_o),
+    .wbs_ack_o(uart_ack),
+    .wbs_dat_o(uart_dat_o),
 
     // IO ports
     .io_in  (io_in      ),
-    .io_out (io_out     ),
-    .io_oeb (io_oeb     ),
+    .io_out (uart_out     ),
+    .io_oeb (uart_oeb     ),
 
     // irq
-    .user_irq (user_irq)
+    .user_irq (uart_irq)
 );
+
+
+user_proj_example mprj (
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
+    .wb_clk_i(wb_clk_i),
+    .wb_rst_i(wb_rst_i),
+
+    // MGMT SoC Wishbone Slave
+
+    .wbs_cyc_i(ex_cyc),
+    .wbs_stb_i(ex_stb),
+    .wbs_we_i(ex_we),
+    .wbs_sel_i(ex_sel),
+    .wbs_adr_i(wbs_adr_i),
+    .wbs_dat_i(wbs_dat_i),
+    .wbs_ack_o(ex_ack),
+    .wbs_dat_o(ex_dat_o),
+
+    // Logic Analyzer
+
+    .la_data_in(la_data_in),
+    .la_data_out(la_data_out),
+    .la_oenb (la_oenb),
+
+    // IO Pads
+
+    .io_in (io_in),
+    .io_out(ex_out),
+    .io_oeb(ex_oeb),
+
+    // IRQ
+    .irq(ex_irq)
+);
+
+
+
 
 endmodule	// user_project_wrapper
 
