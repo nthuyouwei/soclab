@@ -2,7 +2,7 @@
 
 ### Simulation 
 ```sh
-cd ~/caravel-soc_fpga-lab/lab-wlos_baseline/testbench/counter_la_mm
+cd ~/soclab/lab06/intergrate_test/testbench/uart
 source run_clean
 source run_sim
 ```
@@ -10,7 +10,7 @@ source run_sim
 ## Verification with Vivado
 ### Synthesis and Generate bitstream
 ```sh
-cd ~/caravel-soc_fpga-lab/lab-wlos_baseline/vivado
+cd ~/soclab/lab06/intergrate_test/vivado
 source run_vivado
 ```
 
