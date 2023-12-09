@@ -148,8 +148,9 @@ testbench on jupter_notebook [gcd_result.ipynb](https://github.com/nthuyouwei/so
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/f50305df-7bea-4c38-a986-008ab4028600)
 
-firmware code
+firmware code(因為一直在while迴圈所以mprj=AB40) ([gcd_la.c](https://github.com/bol-edu/caravel-soc_fpga/blob/main/testbench/gcd_la/gcd_la.c))
 
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/ea3e85f6-8d6d-4851-adf9-286770147875)
 
 
 # Utilization of IP in the Caravel SoC FPGA
