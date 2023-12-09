@@ -111,6 +111,7 @@ lab03、lab04都是在simiulator的環境下利用verilog 來寫testbench code�
 ```
 fiROM = open("counter_la.hex", "r+")
 #fiROM = open("counter_wb.hex", "r+")
+#fiROM = open("gcd_la.hex", "r+")
 ```
 
 ## counter_la
@@ -138,6 +139,16 @@ testbench on jupter_notebook ([wb_result.ipynb](https://github.com/nthuyouwei/so
 firmware code ([counter_wb.c](https://github.com/nthuyouwei/soclab/blob/main/lab05/vvd_srcs/caravel_soc/counter_wb/counter_wb.c))
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/cd43c668-b03b-4516-b6d1-5f637aa0c05d)
+
+## gcd_la
+
+Compare the mprj_o value =0xab40(16-31bits)should sync to final result in the firmware code.
+
+testbench on jupter_notebook [gcd_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/gcd_result.ipynb)
+
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/f50305df-7bea-4c38-a986-008ab4028600)
+
+firmware code
 
 
 
