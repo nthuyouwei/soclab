@@ -53,7 +53,7 @@ test result(a cycle 25 ns):
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/a3e4a32b-0197-497c-92fc-226c71c34d5d)
 
 ## 優化分析
-the report in the [lab4-2_optimization]()
+the report in the [lab4-2_optimization](https://github.com/nthuyouwei/soclab/blob/main/lab04/lab04_2/lab4-2_optimization.pdf)
 
 
 ## synthesis analyze
