@@ -146,9 +146,10 @@ Compare the mprj_o value =0xab40(16-31bits)should sync to final result in the fi
 
 testbench on jupter_notebook [gcd_result.ipynb](https://github.com/nthuyouwei/soclab/blob/main/lab05/gcd_result.ipynb)
 
-![image](https://github.com/nthuyouwei/soclab/assets/145022311/f50305df-7bea-4c38-a986-008ab4028600)
+![image](https://github.com/nthuyouwei/soclab/assets/145022311/1e836462-52f1-4da4-9cb1-e58c2cfcfd6f)
 
-firmware code(因為一直在while迴圈所以mprj=AB40) ([gcd_la.c](https://github.com/bol-edu/caravel-soc_fpga/blob/main/testbench/gcd_la/gcd_la.c))
+
+firmware code ([gcd_la.c](https://github.com/bol-edu/caravel-soc_fpga/blob/main/testbench/gcd_la/gcd_la.c))
 
 ![image](https://github.com/nthuyouwei/soclab/assets/145022311/ea3e85f6-8d6d-4851-adf9-286770147875)
 
