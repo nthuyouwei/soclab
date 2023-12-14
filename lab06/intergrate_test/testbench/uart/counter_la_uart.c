@@ -45,7 +45,8 @@ extern int* qsort();
 */
 
 void main()
-{
+{	
+	int count;
 #ifdef USER_PROJ_IRQ0_EN
     int mask;
 #endif
@@ -117,7 +118,7 @@ void main()
 	reg_mprj_xfer = 1;
 	while (reg_mprj_xfer == 1);
 
-        // Configure LA probes [31:0], [127:64] as inputs to the cpu 
+    // Configure LA probes [31:0], [127:64] as inputs to the cpu 
 	// Configure LA probes [63:32] as outputs from the cpu
 	reg_la0_oenb = reg_la0_iena = 0x00000000;    // [31:0]
 	reg_la1_oenb = reg_la1_iena = 0xFFFFFFFF;    // [63:32]
@@ -134,23 +135,43 @@ void main()
 	reg_la1_oenb = reg_la1_iena = 0x00000000;    
 
 
+#ifdef USER_PROJ_IRQ0_EN	
+	// unmask USER_IRQ_0_INTERRUPT
+	mask = irq_getmask();
+	mask |= 1 << USER_IRQ_0_INTERRUPT; // USER_IRQ_0_INTERRUPT = 2
+	irq_setmask(mask);
+	// enable user_irq_0_ev_enable
+	user_irq_0_ev_enable_write(1);	
+#endif
 
-
-
-
-
-
-        int *mm_tmp = matmul();
-	reg_mprj_datal = *mm_tmp << 16;
+	
+	
+	// mm
+	count = 0;
+	reg_mprj_datal = 0xAB500000;
+    int* mm_tmp = matmul();
+	reg_mprj_datal = *mm_tmp << 16;	
+	while (count < 30000) count++;
+	count = 0;
 	reg_mprj_datal = *(mm_tmp+5) << 16;
-	reg_mprj_datal = *(mm_tmp+2) << 16;
+	while (count < 30000) count++;
+	count = 0;
+	reg_mprj_datal = *(mm_tmp+2) << 16;	
+	while (count < 30000) count++;
+	count = 0;
 	reg_mprj_datal = *(mm_tmp+3) << 16;	
-        reg_mprj_datal = 0xAB510000;
-        
-        
-        reg_mprj_datal = 0xAB400000;
+	while (count < 30000) count++;
+	count = 0;
+    reg_mprj_datal = 0xAB510000;
+    while (count < 30000) count++;
+	count = 0;
+	
+	// fir
+    reg_mprj_datal = 0xAB600000;
 	int* fir_tmp = fir();
 	reg_mprj_datal = *fir_tmp << 16;
+	while (count < 30000) count++;
+	count = 0;
 	reg_mprj_datal = *(fir_tmp+1) << 16;
 	reg_mprj_datal = *(fir_tmp+2) << 16;
 	reg_mprj_datal = *(fir_tmp+3) << 16;
@@ -161,25 +182,41 @@ void main()
 	reg_mprj_datal = *(fir_tmp+8) << 16;
 	reg_mprj_datal = *(fir_tmp+9) << 16;
 	reg_mprj_datal = *(fir_tmp+10) << 16;
+   	reg_mprj_datal = 0xAB610000;
+   	while (count < 30000) count++;
+	count = 0;
 
-       reg_mprj_datal = 0xAB510000;
-       
-       reg_mprj_datal = 0xAB400000;
-       int* tmp = qsort();
+	
+	// qsort
+   	reg_mprj_datal = 0xAB700000;
+   	while (count < 30000) count++;
+	count = 0;
+   	int* tmp = qsort();
 	reg_mprj_datal = *tmp << 16;
+	while (count < 30000) count++;
+	count = 0;
 	reg_mprj_datal = *(tmp+1) << 16;
+	while (count < 30000) count++;
+	count = 0;
 	reg_mprj_datal = *(tmp+2) << 16;
+	while (count < 30000) count++;
+	count = 0;
 	reg_mprj_datal = *(tmp+3) << 16;
+	while (count < 30000) count++;
+	count = 0;
 	reg_mprj_datal = *(tmp+4) << 16;
 	reg_mprj_datal = *(tmp+5) << 16;
 	reg_mprj_datal = *(tmp+6) << 16;
 	reg_mprj_datal = *(tmp+7) << 16;
 	reg_mprj_datal = *(tmp+8) << 16;
 	reg_mprj_datal = *(tmp+9) << 16;	
-       reg_mprj_datal = 0xAB510000;
+	reg_mprj_datal = 0xAB710000;
+	while (count < 30000) count++;
+	count = 0;
 
 
-	/*while (1) {
+	/*
+	while (1) {
 		if (reg_la0_data_in > 0x1F4) {
 			reg_mprj_datal = 0xAB410000;
 			break;
@@ -198,19 +235,9 @@ void main()
 
 	//print("\n");
 	//print("Monitor: Test 1 Passed\n\n");	// Makes simulation very long!
-	//reg_mprj_datal = 0xAB510000;
+	reg_mprj_datal = 0xAB310000;
+	while (count < 30000) count++;
+	count = 0;
 	
-	reg_mprj_datal = 0xAB400000;
-
-#ifdef USER_PROJ_IRQ0_EN	
-	// unmask USER_IRQ_0_INTERRUPT
-	mask = irq_getmask();
-	mask |= 1 << USER_IRQ_0_INTERRUPT; // USER_IRQ_0_INTERRUPT = 2
-	irq_setmask(mask);
-	// enable user_irq_0_ev_enable
-	user_irq_0_ev_enable_write(1);	
-#endif
-
-        reg_mprj_datal = 0xAB510000;
 }
 
