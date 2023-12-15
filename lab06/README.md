@@ -17,11 +17,33 @@ Waveform :
 
 ### Counter_la_mm
 
+Test result :
 
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/ed55c717-2980-416a-956e-4002940617d7)
+
+Waveform :
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/8f794c06-81ec-4496-85e0-3b98ffffef98)
 
 ### Counter_la_qs
 
+Test result :
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/50ba3548-a6eb-472e-82a2-5b791687daa3)
+
+Waveform :
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/f39d0963-ecc7-45af-b02c-3a8aa82dc747)
+
+
 ### Uart
 
+Test result :
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/f17bf46f-bbf1-4f8f-b432-0969041d0c9d)
+
+Waveform :
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/670fefd9-1d39-4594-a135-6923aa5d3fc2)
 
 ## Intergrate_test
