@@ -156,20 +156,20 @@ module counter_la_qs_tb;
 
 	initial begin
 		wait(checkbits == 16'hAB40);
-		$display("LA Test 1 started");
+		$display("LA Test 1 started, at ", $realtime, " ns");
 		//wait(checkbits == 16'hAB41);
 
 		wait(checkbits == 16'd40);
-		$display("Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+		$display("Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x, at ", checkbits, $realtime, " ns");
 		wait(checkbits == 16'd893);
-		$display("Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+		$display("Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x, at ", checkbits, $realtime, " ns");
 		wait(checkbits == 16'd2541);
-		$display("Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+		$display("Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x, at ", checkbits, $realtime, " ns");
 		wait(checkbits == 16'd2669);
-		$display("Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);		
+		$display("Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x, at ", checkbits, $realtime, " ns");	
 
 		wait(checkbits == 16'hAB51);
-		$display("LA Test 2 passed");
+		$display("LA Test 2 passed, at ", $realtime, " ns");
 		#10000;
 		$finish;
 	end

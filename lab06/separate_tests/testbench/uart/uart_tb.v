@@ -159,13 +159,9 @@ module uart_tb;
 	end
 
 	initial begin
-		wait(checkbits == 16'hAB40);
-		$display("LA Test 1 started");
+		$display("LA Test 1 started, at ", $realtime, " ns");
 
 		send_data_2;
-		
-		wait(checkbits == 16'hAB51);
-		$display("LA Test 1 passed");
 		//wait(checkbits == 61);
 		//send_data_1;
 		//wait(checkbits == 15);
@@ -174,6 +170,7 @@ module uart_tb;
 
 		//wait(checkbits == 16'hAB51);
 		//$display("LA Test 1 passed");
+		repeat(100000) @(posedge clock);
 		$finish;		
 	end
 

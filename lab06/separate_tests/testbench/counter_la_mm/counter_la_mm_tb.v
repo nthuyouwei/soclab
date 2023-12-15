@@ -156,20 +156,20 @@ module counter_la_mm_tb;
 
 	initial begin
 		wait(checkbits == 16'hAB40);
-		$display("LA Test 1 started");
+		$display("LA Test 1 started, at ", $realtime, " ns");
 		//wait(checkbits == 16'hAB41);
 
 		wait(checkbits == 16'h003E);
-		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x, at ", checkbits, $realtime, " ns");
 		wait(checkbits == 16'h0044);
-		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x, at ", checkbits, $realtime, " ns");
 		wait(checkbits == 16'h004A);
-		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x, at ", checkbits, $realtime, " ns");
 		wait(checkbits == 16'h0050);
-		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);		
+		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x, at ", checkbits, $realtime, " ns");		
 
 		wait(checkbits == 16'hAB51);
-		$display("LA Test 2 passed");
+		$display("LA Test 2 passed, at ", $realtime, " ns");
 		#10000;
 		$finish;
 	end
