@@ -47,3 +47,29 @@ Waveform :
 ![image](https://github.com/nthuyouwei/soclab/assets/97797875/670fefd9-1d39-4594-a135-6923aa5d3fc2)
 
 ## Intergrate_test
+
+### Simulation : 
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/5e69547d-c170-49f4-bdeb-41c39025b9ff)
+
+#### Uart
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/f5a3333c-a1cb-4063-bcce-65f8a2c3f465)
+
+#### Matrix Multiplication
+
+當 checkbits 跑到 AB50 的位置開始 Matrix Multiplication，然後執行完回到 AB51。
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/9bf2b72e-e632-4a3d-834c-0a8ae70a177b)
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/631e068d-89d5-4738-a990-02fa2c571294)
+
+#### Fir
+
+當 checkbits 跑到 AB60 的位置開始 Matrix Multiplication，然後執行完回到 AB61。
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/7b979e21-b0bd-4991-b0cb-5ddd7cd13806)
+
+![image](https://github.com/nthuyouwei/soclab/assets/97797875/4a353d0b-42a7-4832-bd6d-7613c9a7d2ae)
+
+
