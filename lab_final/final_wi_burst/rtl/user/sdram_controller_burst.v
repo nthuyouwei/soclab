@@ -1,3 +1,5 @@
+//refer to ntu TA source code
+// we just remapping for our design
 module sdram_controller_example (
         input   clk,
         input   rst,
