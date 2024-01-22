@@ -1,3 +1,6 @@
+// refer to https://github.com/john-1109/SoC-Lab-WLOS/blob/main/rtl/user/sdram_controller.v
+// we just remapping the address for our design
+
 module sdram_controller (
     input   clk,
     input   rst,
