@@ -1,4 +1,4 @@
-// refer to https://github.com/john-1109/SoC-Lab-WLOS/blob/main/rtl/user/sdr.v
+// refer to ntu TA source code
 // we just remapping the address for our design 
 
 
