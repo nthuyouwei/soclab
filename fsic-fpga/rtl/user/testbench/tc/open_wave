@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# gtkwave top_bench.vcd &
-
-vivado -source open_wave.tcl &
-
